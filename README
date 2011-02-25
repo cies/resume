@@ -1,0 +1,15 @@
+h1. Resume of Cies Breijs
+
+On Ubuntu I installed 'texlive-latex-base' and 'tex-gyre' before using 'pdflatex'.
+Besides these packages nothing was needed to compile it into pdf cleanly.
+
+I cannot take much credit for the design, I found it on: http://www.toofishes.net
+Though I changed a lot about it.
+
+
+h2. TODO
+
+ * get a picture in the upper right corner
+ * cleanup the tex file: some repetitive stuff can move into functions
+ * I did not see the lignatures work yet -- gimme lignatures!
+ * get someone with a lot of experience to look at it
