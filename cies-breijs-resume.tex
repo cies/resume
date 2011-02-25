@@ -1,0 +1,331 @@
+% Resume of Cies Breijs
+% =====================
+
+% On Ubuntu I installed 'texlive-latex-base' and 'tex-gyre' before using 'pdflatex'.
+% Besides these packages nothing was needed to compile into pdf cleanly.
+
+% I cannot take much credit for the design, I found it on: http://www.toofishes.net
+
+% vim:set ft=tex spell:
+
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage{multicol}
+\usepackage{epsfig}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{wrapfig}
+\usepackage{relsize}  % for \textscale, which I prefer over \sc (small caps)
+\usepackage[pdftex]{hyperref}  % yups, URLs everwhere...
+\usepackage{xcolor}  % color them links
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
+\usepackage{tgpagella}  % the pretty fonts
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+\xspaceskip7pt  % some more spacing between sentences (use "i.e.\ " or "with SQL\@. " in case of errors)
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	\textscale{1.08}{\textbf{#1}} &
+	{\sc #2} \\
+\end{tabular*}}
+\newcommand{\subheaderrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	\emph{#1} &
+	\emph{#2} \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.04em}\raisebox{.20ex}{\footnotesize\bf ++}}
+
+
+
+%%the needed packages
+% \usepackage[absolute,showboxes]{textpos}
+% \usepackage[colorgrid,texcoord]{eso-pic}
+%
+%%adjust the TPHorizModule and TPHorizModule units to the displayed mm %grid
+% \TPGrid{210}{297}
+%
+%%puts a graphic at the absolute position described by the grid
+%%#1 x, #2 y, #3 width, #4 height, #5 graphic
+% \newcommand\putpic[5]{%
+        % \begin{textblock}{#3}(#1,#2)
+  % \includegraphics[width=#3\TPHorizModule,
+  % height=#4\TPVertModule]{#5}
+     % \end{textblock}
+% }
+
+% and the actual content starts here
+\begin{document}
+
+% \putpic{162.5}{13.5}{23}{23}{cies-face}
+
+\hspace{-\parindent}{\LARGE \textbf{Cies Breijs}}\ \ \ \emph{June 12, 1982}
+
+
+\vspace{0.3em}
+\hspace{-\parindent}\href{mailto:cies at kde.nl}{cies$\,\!$@$\,\!$kde.nl}\ \ \textbullet  % obfuscated
+\ \ +31.646469087\ \ \textbullet
+\ \ +31.10.4226281\ \ \textbullet
+\ \ \href{http://www.linkedin.com/in/ciesbreijs}{www.linkedin.com/in/ciesbreijs}
+\\
+Akkerwindestraat 1\ \ \textbullet
+\ \ 3051\thinspace \textscale{.85}{LA}\ \ \textbullet
+\ \ Rotterdam\ \ \textbullet
+\ \ The Netherlands
+
+\vspace{1.1em}
+\hrule
+\vspace{-0.4em}
+\subsection*{Summary}
+\vspace{-1.2em}
+\begin{multicols}{2}
+Creative software engineer with roots in the open source (\textscale{.85}{FLOSS}) movement and a passion for user/customer centered software development.
+
+At the age of 7 (1989) I wrote my first lines using a \textscale{.85}{LOGO}-like language on an \textscale{.85}{MSX} (pre-\textscale{.85}{PC}). Two years later I attended a conference on an emerging new technology, the Internet, at the Erasmus University from which I would graduate 16 years later.
+
+After being introduced to the open source movement in 1997, I taught myself a variety of skills with help from the open source community. Since 2002 I am a contributor to the \textscale{.85}{KDE} project, as my pet project \textscale{.85}{KT}urtle got admitted into their \emph{edu} module.
+
+\textscale{.85}{KT}urtle aims to make programming most easy and touchable. It is well suited for teaching (children) the basics of programming, math and geometry. Through this project I hope to give others the same opportunity I was given:\ to learn programming at early age.
+
+From 2003 to 2007 I studied at the Erasmus University Rotterdam and graduated in \emph{Business and Computer Science} (one curriculum). In college I mainly focused on the economics of open source, rapid application development (\textscale{.85}{RAD}) and the semantic web technology stack (\textscale{.85}{RDF}/\textscale{.85}{RDFS}, \textscale{.85}{OWL} and \textscale{.85}{SPARQL}).
+
+After university I traveled Europe and Asia during a 2 year sabbatical, I worked on several occasions (see experience below) and initiated an open source project (\href{http://www.truetopiaproject.org}{Truetopia}:\ a web application that facilitates self-governing online communities).
+
+I am currently evaluating the plethora of interesting employment and business opportunities in \textscale{.85}{IT} while quietly working on a product to be released later this year.
+\end{multicols}
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\href{http://www.intellecap.com}{Intellecap}}
+		{Mumbai \& Hyderabad, India}
+	\\
+  \subheaderrow
+		{\textscale{.85}{IT} Consultant}
+		{Nov '08 -- Feb '09}
+  {Intellecap is a social-sector advisory firm serving corporates, non-profits, development agencies, and governments working in developing markets. Assessed their software development team and methodologies. Trained their developers and build several web applications, of which one is Mostfit:\ an open source \textscale{.85}{MIS} for \href{http://en.wikipedia.org/wiki/Microcredit}{microcredit} lenders.
+  \vspace{0.2em}}
+  \\
+	\subheaderrow
+		{\textscale{.85}{IT} \& Strategy Consultant}
+		{Jan '10 -- present}
+  Mostfit became a success and I was called in to solve several technical challenges, look at potential growth strategies, and assist in making a business case for this product in a company of its own.
+
+	\item
+	\headerrow
+		{\href{http://www.zarafa.com}{Zarafa}}
+		{Delft, The Netherlands}
+	\\
+	\subheaderrow
+		{\textscale{.85}{QA} \& Release Manager}
+		{Dec '09 -- Jan '11}
+  Zarafa might be the fastest growing open source product company in Europe. For an open source enthusiast like myself, working with Zarafa is a wonderful opportunity. Reporting directly to the \textscale{.85}{CEO}, Brian Josef, and working closely with the \textscale{.85}{CTO}, Steve Hardy, I drove the change to test automation and continuous integration. Furthermore I architected new documentation and translation systems. My Indian work experiences proved particularly valuable, as I was sent to analyze and streamline their outsourced operations in India.
+
+	\item
+	\headerrow
+		{\href{http://www.dharmapublishing.com}{Dharma Publishing}}
+		{near San Francisco (\textscale{.85}{CA}), \textscale{.85}{USA}}
+	\\
+	\subheaderrow
+		{\textscale{.85}{IT} Consultant}
+		{Nov '09 -- Dec '09}
+  Dharma Publishing, the worlds largest Buddhist publisher, is a non-profit, all-volunteer organization that helps to preserve Tibetan Buddhism and culture. I build them a \href{http://www.dharmapublishing.com}{web store}, and moved the infrastructure of all their web media to a nearly zero maintenance setup that they can maintain themselves.
+
+	\item
+	\headerrow
+		{\href{http://www.kde.org}{KDE}}
+		{}
+	\\
+	\subheaderrow
+		{Software Engineer}
+		{Dec '03 -- present}
+  \textscale{.85}{KT}urtle is an educational programming environment that simplifies learning the basics of programming. At early age I learned programming using \textscale{.85}{MSX-LOGO}, by creating \textscale{.85}{KT}urtle I want to ensure future generation's access to a similar piece of software. I was honored when \textscale{.85}{KT}urtle got admitted to \textscale{.85}{KDE} in 2003.
+
+	\item
+	\headerrow
+		{\href{http://www.truetopiaproject.org}{Truetopia Project}}
+		{}
+	\\
+	\subheaderrow
+		{Initiator}
+		{Nov '07 -- Apr '10}
+  The Truetopia Project is an open source web application (Rails) to facilitate self-governing communities. It provides a workflow for collaborative problem identification and solution design.
+
+\pagebreak
+
+	\item
+	\headerrow
+		{\href{http://www.dpu.ac.th/dpuic}{Dhurakij Pundit University International College}}
+		{Bangkok, Thailand}
+	\\
+	\subheaderrow
+		{Guest Lecturer}
+		{Sep '09}
+  Dr.\@ Pilun Piyasirivej and Mr.\@ Michel Bauwens invited me to give two guest lectures:\ one on the open source movement and one on the semantic web.
+
+	\item
+	\headerrow
+		{\href{http://www.opendream.th}{Opendream}}
+		{Bangkok, Thailand}
+	\\
+	\subheaderrow
+		{\textscale{.85}{IT} Consultant}
+    {Aug '09 -- Sep '09}
+  Architected and largely implemented an open source media sharing web service (\textscale{.85}{REST} api) that facilitates video uploads, transcoding and streaming. Coached their development team on system design, ruby development (using Merb/Rails) and testing strategies such as \textscale{.85}{TDD}/\textscale{.85}{BDD}.
+
+	\item
+	\headerrow
+		{\href{http://www.commuun.nl}{Commuun}}
+		{Rotterdam, The Netherlands}
+	\\
+	\subheaderrow
+		{Senior Visionary}
+    {Jul '06 -- Sep '09}
+  I helped Peter Duijnstee (the proprietor of Commuun) with setting up the technical infrastructure, defining the core competences and creating a brand for his internet company. We collaborated on several web applications (all Rails apps) within the context of his company.
+
+	\item
+	\headerrow
+		{\href{http://www.eur.nl}{Erasmus University Rotterdam}}
+		{Rotterdam, The Netherlands}
+	\\
+	\subheaderrow
+		{Guest Lecturer}
+    {Jul '06 -- Jul '09}
+  Yearly guest lectures on the phenomenon of open source, as part of the first year curriculum of \emph{Business Computer Science}.
+
+	\item
+	\headerrow
+		{LIP Automatisering}
+		{Breda, The Netherlands}
+	\\
+	\subheaderrow
+		{Software Auditor}
+    {Sep '06}
+  Audited their flag ship product \textscale{.85}{LIP SUITE}:\ an \textscale{.85}{ERP} solution for construction companies.
+
+
+
+	\item
+	\headerrow
+		{\href{http://www.thehealthagency.com}{The Health Agency}}
+		{Delft \& Rotterdam, The Netherlands}
+	\\
+	\subheaderrow
+		{Software Engineer}
+    {Jun '05 -- Feb '06}
+  {I worked on their innovative content management system (\textscale{.85}{CMS}) targeted towards the health care sector. It is developed from scratch in Python and makes heavy use of Postgre\textscale{.85}{SQL}, \textscale{.85}{XML}, \textscale{.85}{XSLT} and TwistedMatrix.
+  \vspace{0.2em}}
+  \subheaderrow
+    {Software Auditor}
+    {Dec '06}
+  Assessed their Python/Zope/Zo\textscale{.85}{DB}-based web framework re-engineering project.
+
+\begin{center}
+\emph{Please refer to \href{http://www.linkedin.com/in/ciesbreijs}{my Linkedin profile} for the complete list of work experiences along with recommendations.}
+\end{center}
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{Erasmus University Rotterdam}
+		{Rotterdam, The Netherlands}
+	\subheaderrow
+		{Bachelor degree in Computer Science \& Economics}
+		{2004 -- 2007}
+  Focussed on the economics of open source, rapid application development and the semantic web technology stack (\textscale{.85}{RDF}/\textscale{.85}{RDFS}, \textscale{.85}{OWL} and \textscale{.85}{SPARQL}).
+
+  \item
+	\headerrow
+		{Technical University Delft}
+		{Delft, The Netherlands}
+	\\
+	\subheaderrow
+		{Industrial Design (discontinued)}
+		{2001 -- 2002}
+
+	\item
+	\headerrow
+		{Libanon Lyceum}
+		{Rotterdam, The Netherlands}
+	\\
+	\subheaderrow
+		{\textscale{.85}{VWO}}
+		{1994 -- 2000}
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Skills}
+
+\begin{indentsection}{\parindent}
+% \hyphenpenalty=1000
+\begin{description*}
+	\item[Natural languages:]
+  Dutch \emph{(mother tongue)}, English \emph{(full professional proficiency)}, German \emph{(elementary proficiency)}, French \emph{(elementary proficiency)} and Mandarin Chinese \emph{(beginner)}.
+\end{description*}
+\end{indentsection}
+
+\begin{indentsection}{\parindent}
+%\hyphenpenalty=1000
+\begin{description*}
+	\item[Technical specialties:]
+  Web app development using Ruby (on Rails), Python and Java (Tomcat). Solid know\-ledge of web technologies:\ \textscale{.85}{HTML}, \textscale{.85}{CSS}, \textscale{.85}{SQL}, \textscale{.85}{XML}, \textscale{.85}{RDF}, \textscale{.85}{REST}, \textscale{.85}{SOAP} and JavaScript (mainly jQuery). Linux administration skills:\ bash, Apache, My\textscale{.85}{SQL}, Postgres\textscale{.85}{SQL}, virtualization/cloud (Open\textscale{.85}{VZ}, \textscale{.85}{VM}ware, \textscale{.85}{KVM}, Xen and \textscale{.85}{EC}2), datacenter automation (Puppet and Chef), continuous integration (Hudson) and Ruby/\linebreak[0]\textscale{.85}{PHP} web application stacks. Thorough \textscale{.85}{\CPP} skills (mainly using Nokia's Qt lib for cross platform \textscale{.85}{GUI} apps).
+\end{description*}
+\end{indentsection}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Interests}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Non-exhaustive and in alphabetical order:]
+  art, Buddhism, cryptography, music, open source, software engineering, travel, typography (e.g.\ graphic design, \LaTeX) \& vegetarian cooking.
+\end{description*}
+\end{indentsection}
+
+
+\end{document}
