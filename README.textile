@@ -1,11 +1,11 @@
 h1. Resume of Cies Breijs
 
-On Ubuntu I installed @texlive-tetex@ and @tex-gyre@ before using @xelatex@ to generate the @pdf@.
+On Ubuntu I installed @texlive-xetex@ and @tex-gyre@ before using @xelatex@ to generate the @pdf@.
 
 I cannot take much credit for the design, I found it on "toofishes' blog":http://www.toofishes.net
 Though I changed it alot (it uses @pdflatex@, I've moved it on to XeTeX for sexyier 'old style' numbers).
 
-The result should be visible "here":https://github.com/cies/resume/raw/master/cies-breijs-resume.pdf
+The result should be visible "here":https://github.com/cies/resume/raw/master/cies-breijs-resume.pdf ...
 
 
 h2. TODO
@@ -19,4 +19,4 @@ h2. TODO
 h2. TADA
 
  * lignatures (not very noticable with the gyre/pagella font, one could try libertine or hoefler)
- * old style numbers (had to make the apostrophes look nice on shortened years)
+ * old style numbers (had to make the apostrophes look nice on double-digit years)
