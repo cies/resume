@@ -1,11 +1,11 @@
 % Resume of Cies Breijs
 % =====================
 
-% On to generate a pdf from this file in Ubuntu:
-%   sudo aptitude install texlive-xetex tex-gyre
+% To generate a pdf from this file in Ubuntu:
+%   sudo aptitude install texlive-xetex tex-gyre texlive-latex-recommended
 %   xelatex cies-breijs-resume.tex
 %
-% I don't use pdflatex because XeTeX is the future...
+% I don't use pdflatex because XeTeX allows me to use gyre's lowercase numbers.
 
 % vim:set ft=tex spell:
 
@@ -14,15 +14,15 @@
 \usepackage[utf8]{inputenc}
 \usepackage{mdwlist}
 \usepackage{multicol}
-\usepackage{epsfig}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage{wrapfig}
 \usepackage{relsize}  % for \textscale, which I prefer over \sc (small caps), see my \acr command
+
 \usepackage[pdftex]{hyperref}  % yups, URLs everwhere...
-\usepackage{xcolor}  % color them links
+\usepackage{xcolor}  % ... and color them links
 \definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
 \hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
+
 \usepackage{tgpagella}  % the pretty fonts
 \usepackage{fontspec}
 \addfontfeature{Style=Historic}
@@ -51,7 +51,6 @@
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 \xspaceskip7pt  % some more spacing between sentences (use "i.e.\ " or "with SQL\@. " in case of errors)
-
 
 % capnums command, for new/lining/capital numbers
 \newcommand*\capnums[1]{{\fontencoding{T1}\fontfamily{pplx}\selectfont #1}}
@@ -101,27 +100,7 @@
 
 
 
-%% some stuff to the pictures to work...
-% \usepackage[absolute,showboxes]{textpos}
-% \usepackage[colorgrid,texcoord]{eso-pic}
-%
-%%adjust the TPHorizModule and TPHorizModule units to the displayed mm %grid
-% \TPGrid{210}{297}
-%
-%%puts a graphic at the absolute position described by the grid
-%%#1 x, #2 y, #3 width, #4 height, #5 graphic
-% \newcommand\putpic[5]{%
-        % \begin{textblock}{#3}(#1,#2)
-  % \includegraphics[width=#3\TPHorizModule,
-  % height=#4\TPVertModule]{#5}
-     % \end{textblock}
-% }
-
-
-
 \begin{document}
-
-% \putpic{162.5}{13.5}{23}{23}{cies-face}
 
 \hspace{-\parindent}{\LARGE \textbf{Cies Breijs}}\ \ \ \emph{June 12, 1982}
 
