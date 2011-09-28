@@ -1,7 +1,7 @@
 # a resume in LaTeX
 
  * is maybe a template for yours :)
- * view the resulting [pdf file]("here":https://github.com/cies/resume/raw/master/cies-breijs-resume.pdf)
+ * view the resulting [pdf file](https://github.com/cies/resume/raw/master/cies-breijs-resume.pdf)
  * shows you how to make it compile on a recent ubuntu
 
 i've looked at most -- if not all -- of the [LaTeX](http://en.wikipedia.org/wiki/LaTeX) resumes and templates, but not quite liked them. i picked [the best i could find](http://www.toofishes.net/blog/tags/latex) and adapted it to my taste.
