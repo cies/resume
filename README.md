@@ -46,4 +46,6 @@ i don't use `pdflatex` but `XeTeX` since it allows me to use gyre pagella's lowe
 
 # terms of sharing
 
-feel free to copy (fork!) it, because this is `Creative Common Attribution Share-Alike 3.0` licensed.
+feel free to copy it, or even better fork(!) it, because the LaTeX source code of this project is [GPLv3](http://www.gnu.org/licenses/quick-guide-gplv3.html) licensed.
+
+the text of my resume [CC-NC-ND](http://creativecommons.org/licenses/by-nc-nd/3.0/) licensed.

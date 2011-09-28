@@ -1,5 +1,5 @@
-% TeX Resume of Cies Breijs
-% =====================
+% LaTeX source of my resume
+% =========================
 
 % commented ;)
 
@@ -9,103 +9,20 @@
 % vim:set ft=tex:
 
 \documentclass[10pt,a4paper]{article}
-\usepackage[a4paper,margin=0.75in]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage{mdwlist}
-\usepackage{multicol}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\usepackage{relsize}  % for \textscale, which I prefer over \sc (small caps), see my \acr command
 
-\usepackage[pdftex]{hyperref}  % yups, URLs everwhere...
-\usepackage{xcolor}  % ... and color them links
-\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
-\hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
-
-\usepackage{tgpagella}  % the pretty fonts
-\usepackage{fontspec}
-\addfontfeature{Style=Historic}
-\setmainfont
-  [ ExternalLocation ,
-    Mapping = tex-text ,
-    Numbers = OldStyle ,
-    Ligatures= {Common,Historical,Contextual,Rare} ,
-    BoldFont = texgyrepagella-bold.otf ,
-    ItalicFont = texgyrepagella-italic.otf ,
-    BoldItalicFont = texgyrepagella-bolditalic.otf ]
-  {texgyrepagella-regular.otf}
-
-% use this for the libertine font (has more lignatures), install 'ttf-linux-libertine' on ubuntu
-% \setmainfont
-%   [ ExternalLocation = /usr/share/fonts/truetype/linux-libertine/ ,
-%     Mapping = tex-text ,
-%     Numbers = OldStyle ,
-%     Ligatures= {Common,Historical,Contextual,Rare} ,
-%     BoldFont = LinLibertine_Bd.ttf ,
-%     ItalicFont = LinLibertine_It.ttf ,
-%     BoldItalicFont = LinLibertine_BI.ttf ]
-%   {LinLibertine_Re.ttf}
-
-% document wide styling
-\pagestyle{empty}
-\setlength{\tabcolsep}{0em}
-\xspaceskip7pt  % some more spacing between sentences (use "i.e.\ " or "with SQL\@. " in case of errors)
-
-% was only used for 'EC2', and caused and error, so commented it out
-% % capnums command, for new/lining/capital numbers
-% \newcommand*\capnums[1]{{\fontencoding{T1}\fontfamily{pplx}\selectfont #1}}
-
-% acr command, to quickly mark acronyms for special formatting
-\newcommand*\acr[1]{\textscale{.85}{#1}}
-
-% indentsection style, used for sections that aren't already in lists
-% that need indentation to the level of all text in the document
-\newenvironment{indentsection}[1]%
-{\begin{list}{}%
-  {\setlength{\leftmargin}{#1}}%
-  \item[]%
-}
-{\end{list}}
-
-% opposite of above; bump a section back toward the left margin
-\newenvironment{unindentsection}[1]%
-{\begin{list}{}%
-  {\setlength{\leftmargin}{-0.5#1}}%
-  \item[]%
-}
-{\end{list}}
-
-% headerrow command, used for a new employer
-\newcommand{\headerrow}[2]
-{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-  \textscale{1.08}{\textbf{#1}} &
-  {#2} \\
-\end{tabular*}}
-
-% subheaderrow command, used for a new position
-\newcommand{\subheaderrow}[2]
-{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-  \emph{#1} &
-  \emph{#2} \\
-\end{tabular*}}
-
-% CPP command, make "C++" look pretty when used in text by touching up the plus signs
-\newcommand{\CPP}{C\nolinebreak[4]\hspace{-.04em}\raisebox{.20ex}{\footnotesize\bf ++}}
-
-% KTurtle command, make the document a bit more readable
-\newcommand{\KTurtle}{\acr{KT}urtle }
-
-% apo command, for an apostrophe that looks good on old style nums
-\newcommand{\apo}{\raisebox{-.18ex}{'}{\hspace{-.1em}}}
+% include the other `tex` file
+\include{resume-commands}
 
 
 
 \begin{document}
 
+
+
 \hspace{-\parindent}{\LARGE \textbf{Cies Breijs}}\ \ \ \emph{June 12, 1982}
 
 \vspace{0.3em}
-\hspace{-\parindent}\href{mailto:cies at kde.nl}{cies$\,\!$@$\,\!$kde.nl}\ \ \textbullet  % email address obfuscated
+\hspace{-\parindent}\href{mailto:cies.at.kde.dot.nl}{cies$\,\!$@$\,\!$kde.nl}\ \ \textbullet  % email address obfuscated
 \ \ \textsmaller{+}31.646469087\ \ \textbullet
 \ \ \textsmaller{+}31.10.4226281\ \ \textbullet
 \ \ \href{http://www.linkedin.com/in/ciesbreijs}{www.linkedin.com/in/ciesbreijs}
@@ -331,6 +248,8 @@ I am currently evaluating the plethora of interesting employment and business op
     art, Buddhism, cryptography, music, open source, philosophy, software engineering, travel, typography (e.g.\ graphic design, \LaTeX), \acr{UX} and vegetarian cooking.
   \end{description*}
   \end{indentsection}
+
+
 
 
 \end{document}
