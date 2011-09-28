@@ -6,7 +6,7 @@
 
 i've looked at most -- if not all -- of the [LaTeX](http://en.wikipedia.org/wiki/LaTeX) resumes and templates, but not quite liked them. i picked [the best i could find](http://www.toofishes.net/blog/tags/latex) and adapted it to my taste.
 
-go ahead and fork it.. :)  i dont really feel like making it into
+go ahead and fork it.. `:)`  i dont really feel like making it into
 'library'.
 
 i like typesetting, so naturally did my best. it uses the pagella font
