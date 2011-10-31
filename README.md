@@ -24,7 +24,7 @@ everything it relies on is open source.
 to generate a pdf from this file in ubuntu:
 
         sudo apt-get install texlive-xetex tex-gyre texlive-latex-recommended
-        xelatex cies-breijs-resume.tex
+        xelatex cies-breijs-resume
 
 i don't use `pdflatex` but `XeTeX` since it allows me to use gyre pagella's lowercase numbers.
 
