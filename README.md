@@ -39,7 +39,7 @@ I don't use `pdflatex` but `XeTeX` since it allows me to use Pagella's lowercase
   * Allow ligatures (not very noticable with the Pagella font, one could try Libertine or Hoefler)
   * Use old style numbers (had to make the apostrophes look nice on double-digit years)
   * Cleanup the tex file: some repetitive stuff can move into functions
-
+  * Clever page breaking
 
 
 # Terms of sharing

@@ -50,7 +50,7 @@
 %   {LinLibertine_Re.ttf}
 
 
-%%% DOCUMENT WISE STYLING
+%%% DOCUMENT WIDE STYLING
 
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
@@ -63,7 +63,7 @@
 \newcommand*\maintitle[2]{\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
 
 % title for the root sections (experience, education, etc) of the resume
-\newcommand*\roottitle[1]{\subsection*{#1}\vspace{-0.3em}}
+\newcommand*\roottitle[1]{\subsection*{#1}\vspace{-0.3em}\nopagebreak[4]}
 
 % acr command, to quickly mark acronyms for special formatting
 \newcommand*\acr[1]{\textscale{.85}{#1}}
@@ -85,10 +85,10 @@
 \addtolength{\newparindent}{\parindent}
 
 % headerrow command, used for a new employer
-\newcommand{\headedsection}[3]{\begin{indentsection}{\newparindent} \item[] \textscale{1.1}{#1} \hfill #2 #3 \end{indentsection}}
+\newcommand{\headedsection}[3]{\begin{indentsection}{\newparindent} \item[] \textscale{1.1}{#1} \hfill #2 #3 \end{indentsection}\nopagebreak[4]}
 
 % subheaderrow command, used for a new position
-\newcommand{\headedsubsection}[3]{\begin{indentsection}{\newparindent} \item[] \textbf{#1} \hfill \emph{#2} #3 \end{indentsection} }
+\newcommand{\headedsubsection}[3]{\begin{indentsection}{\newparindent} \item[] \textbf{#1} \hfill \emph{#2} #3 \end{indentsection}\nopagebreak[4]}
 
 % it seems not to work when simply using \parindent...
 \newlength{\doubleparindent}
@@ -98,8 +98,14 @@
 % body text, what the headers need to be headers
 \newcommand{\bodytext}[1]{\begin{indentsection}{\newparindent} \item[] #1 \end{indentsection}}
 
+% \vspace variaties
+\newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]}
+\newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]}
+
+% \spacedhrule (top, bottom)
+\newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}}
+
 % inlineheadsection command, used for a new employer
-% TODO: fix less indented labels
 \newcommand{\inlineheadsection}[2]{\begin{basedescript}{\setlength{\leftmargin}{\doubleparindent}} \item[\hspace{\newparindent}\textbf{#1}] #2 \end{basedescript}}
 
 % CPP command, make "C++" look pretty when used in text by touching up the plus signs
