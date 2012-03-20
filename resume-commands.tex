@@ -10,18 +10,15 @@
 
 % \documentclass[10pt,a4paper]{article}  % i do this in the document itself
 
-% some have defaults values that can be change from the documents i guess
+
+%%% LOAD AND SETUP PACKAGES
+
 \usepackage[a4paper,margin=0.75in]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage{mdwlist}  % for lists with a inline heading and indented content (see Experiences)
+\usepackage{mdwlist}   % to finetue lists with a inline heading and indented content (see Experiences)
 \usepackage{multicol}  % for multiple column text
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\usepackage{relsize}  % for \textscale, which I prefer over \sc (small caps), see my \acr command
+\usepackage{relsize}   % for \textscale, which I prefer over \sc (small caps), see my \acr command
 \usepackage[english]{babel}
 \hyphenation{Some-long-word}
-
-\usepackage{longtable}  % to create tables that span over multiple pages
 
 \usepackage[pdftex]{hyperref}  % yups, URLs everwhere...
 \usepackage{xcolor}  % ... and color them links
@@ -52,10 +49,18 @@
 %     BoldItalicFont = LinLibertine_BI.ttf ]
 %   {LinLibertine_Re.ttf}
 
-% document wide styling
+
+%%% DOCUMENT WISE STYLING
+
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 \xspaceskip7pt  % some more spacing between sentences (use "i.e.\ " or "with SQL\@. " in case of errors)
+
+
+%%% CUSTOM COMMANDS
+
+% main title (name) with subtitle (date)
+\newcommand*\maintitle[2]{\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
 
 % acr command, to quickly mark acronyms for special formatting
 \newcommand*\acr[1]{\textscale{.85}{#1}}
@@ -64,13 +69,11 @@
 \newcommand*\bull{\raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}}}
 \newcommand*\sbull{\ \ \bull \ \ }
 
-
 % indentsection style, used for sections that aren't already in lists
 % that need indentation to the level of all text in the document
 \newenvironment{indentsection}[1]%
 {\begin{list}{}%
   {\setlength{\leftmargin}{#1}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}%
-  \item[]%
 }
 {\end{list}}
 
@@ -79,13 +82,22 @@
 \addtolength{\newparindent}{\parindent}
 
 % headerrow command, used for a new employer
-\newcommand{\headedsection}[3]{\begin{indentsection}{\newparindent} \textscale{1.1}{#1} \hfill #2 #3 \end{indentsection}}
+\newcommand{\headedsection}[3]{\begin{indentsection}{\newparindent} \item[] \textscale{1.1}{#1} \hfill #2 #3 \end{indentsection}}
 
 % subheaderrow command, used for a new position
-\newcommand{\headedsubsection}[3]{\begin{indentsection}{\newparindent} \textbf{#1} \hfill \emph{#2} #3 \end{indentsection} }
+\newcommand{\headedsubsection}[3]{\begin{indentsection}{\newparindent} \item[] \textbf{#1} \hfill \emph{#2} #3 \end{indentsection} }
+
+% it seems not to work when simply using \parindent...
+\newlength{\doubleparindent}
+\addtolength{\doubleparindent}{\parindent}
+\addtolength{\doubleparindent}{\parindent}
 
 % body text, what the headers need to be headers
-\newcommand{\bodytext}[1]{\begin{indentsection}{\newparindent} #1 \end{indentsection}}
+\newcommand{\bodytext}[1]{\begin{indentsection}{\newparindent} \item[] #1 \end{indentsection}}
+
+% inlineheadsection command, used for a new employer
+% TODO: fix less indented labels
+\newcommand{\inlineheadsection}[2]{\begin{basedescript}{\setlength{\leftmargin}{\doubleparindent}} \item[\hspace{\newparindent}\textbf{#1}] #2 \end{basedescript}}
 
 % CPP command, make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}{C\nolinebreak[4]\hspace{-.04em}\raisebox{.20ex}{\footnotesize\bf ++}}

@@ -1,20 +1,19 @@
 # My resume in LaTeX
 
- * is maybe the basis for yours :)
- * view the resulting [pdf file](https://github.com/cies/resume/raw/master/cies-breijs-resume.pdf)
- * easy to compile (with nice fonts and all) on a recent Ubuntu
+ * Is maybe the basis for yours :)
+ * Results in a [beautifully typesetted 2 page pdf file](https://github.com/cies/resume/raw/master/cies-breijs-resume.pdf)
+ * Compiles (with nice fonts and all) without much trouble on a recent version of Ubuntu
 
-I've looked at most -- if not all -- of the [LaTeX](http://en.wikipedia.org/wiki/LaTeX) resumes and templates I could find on the internet, but not quite liked any of them.  I picked [the best i could find](http://www.toofishes.net/blog/tags/latex) and adapted it to fit my ideas about graphic design and typography.
+I've looked at most, if not all, of the [LaTeX](http://en.wikipedia.org/wiki/LaTeX) resumes and templates I could find on the internet, but none of them I really liked.  I picked [the best I could find](http://www.toofishes.net/blog/tags/latex) and adapted it to fit my ideas about graphic design and typography.
 
 Go ahead and fork it.. `:)`  I dont really feel like making it into 'library'.
 
 As I love typesetting, I naturally did my best. It uses the TeX Gyre Pagella font
 that is often used for books (with 'low case numbers' -- as I love those).
 
-Except the h-lines and some bullets everything is made of text.  It uses hyper-refs where applicable, all in dark blue so 'print safe'.
+Except the horizonal lines and some bullets everything is made of text.  It uses hyper-refs where applicable, all in dark blue so 'print safe'.
 
-Everything it relies on is open source and `apt-get`able in recent
-versions of Ubuntu.
+Everything it relies on is open source and is readily available in recent versions of Ubuntu.
 
 
 
@@ -36,10 +35,10 @@ I don't use `pdflatex` but `XeTeX` since it allows me to use Pagella's lowercase
 
 # TaDa
 
-  * separate file for command definitions (so we can collaborate on that file using forks and pull-requests)
-  * ligatures (not very noticable with the Pagella font, one could try Libertine or Hoefler)
-  * old style numbers (had to make the apostrophes look nice on double-digit years)
-  * cleanup the tex file: some repetitive stuff can move into functions
+  * Separate file for command definitions (so we can collaborate on that file using forks and pull-requests)
+  * Allow ligatures (not very noticable with the Pagella font, one could try Libertine or Hoefler)
+  * Use old style numbers (had to make the apostrophes look nice on double-digit years)
+  * Cleanup the tex file: some repetitive stuff can move into functions
 
 
 

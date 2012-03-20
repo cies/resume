@@ -10,18 +10,17 @@
 
 \documentclass[10pt,a4paper]{article}
 
-% include the other `tex` file that takes care of loading packages and defining commands
+% include the `tex` instructions that takes care of loading packages and defining commands
 \include{resume-commands}
 
 
 \begin{document}
 
-
-\hspace{-\parindent}{\LARGE \textbf{Cies Breijs}}\ \ \ \emph{June 12, 1982}
+\maintitle{Cies Breijs}{June 12, 1982}
 
 \vspace{0.3em}
-% TODO: move to sbull
-\hspace{-\parindent}\href{mailto:cies.at.kde.dot.nl}{cies\mbox{}@\mbox{}kde.nl}\sbull % email address obfuscated
+
+\noindent\href{mailto:cies.at.kde.dot.nl}{cies\mbox{}@\mbox{}kde.nl}\sbull % email address obfuscated
 \textsmaller{+}31.646469087\sbull
 cies010 \emph{(Skype)}\sbull
 \href{http://www.linkedin.com/in/ciesbreijs}{www.linkedin.com/in/ciesbreijs}
@@ -56,6 +55,7 @@ Upon return from my travels I joined Zarafa, one of the largest open source soft
 \headedsection
   {\href{http://www.intellecap.com}{Intellecap}/\href{http://istpl.in}{\acr{ISTPL}}}
   {\textsc{Mumbai, Pune \& Hyderabad, India}} {%
+
   \headedsubsection
     {\acr{IT} Consultant}
     {Nov \apo08 -- Feb \apo09}
@@ -108,8 +108,6 @@ Upon return from my travels I joined Zarafa, one of the largest open source soft
     {\bodytext{The Truetopia Project is an open source web application (Rails) to facilitate self-governing communities. It provides a workflow for collaborative problem identification and solution design.}}
 }
 
-%\pagebreak
-
 \headedsection
   {\href{http://www.dpu.ac.th/dpuic}{Dhurakij Pundit University International College}}
   {\textsc{Bangkok, Thailand}} {%
@@ -159,6 +157,7 @@ Upon return from my travels I joined Zarafa, one of the largest open source soft
 \headedsection
   {\href{http://www.thehealthagency.com}{The Health Agency}}
   {\textsc{Delft \& Rotterdam, The Netherlands}} {%
+
   \headedsubsection
     {Software Engineer}
     {Jun \apo05 -- Feb \apo06}
@@ -190,7 +189,7 @@ Upon return from my travels I joined Zarafa, one of the largest open source soft
   {Technical University Delft}
   {\textsc{Delft, The Netherlands}} {%
   \headedsubsection
-    {Industrial Design Engineering (discontinued)}
+    {Industrial Design Engineering \textnormal{(discontinued)}}
     {2001 -- 2002} {}
 }
 
@@ -204,29 +203,19 @@ Upon return from my travels I joined Zarafa, one of the largest open source soft
 
 \vspace{0.3em} \hrule \vspace{-0.4em} \subsection*{Skills}
 
-  \begin{indentsection}{\parindent}  % Technical Secialties
-  \begin{description*}
-    \item[Technical specialties:]
-    Software design and implementation, with(in) a team. I love Ruby/Python/Java, know \CPP and always flirt with Haskell. Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mainly jQuery). Linux administration skills:\ bash, Apache, My\acr{SQL}, Postgres\acr{SQL}, virtualization/cloud (Open\acr{VZ}, \acr{VM}ware, \acr{KVM}, Xen and \acr{EC}2), datacenter automation (Puppet and Chef), continuous integration (Hudson).
-  \end{description*}
-  \end{indentsection}
+\inlineheadsection
+  {Technical specialties:}
+  {Software design and implementation, with(in) a team. I love Ruby/Python/Java, know \CPP~and flirt with Haskell. Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mainly jQuery). Linux administration skills:\ bash, Apache, My\acr{SQL}, Postgres\acr{SQL}, virtualization/cloud (Open\acr{VZ}, \acr{VM}ware, \acr{KVM}, Xen and \acr{EC}2), datacenter automation (Puppet and Chef), continuous integration (Hudson).}
 
-  \begin{indentsection}{\parindent}  % Natural Languages
-  \begin{description*}
-    \item[Natural languages:]
-    Dutch \emph{(mother tongue)}, English \emph{(full professional proficiency)}, German \emph{(limited working proficiency)}, French \emph{(elementary proficiency)} and Mandarin Chinese \emph{(beginner)}.
-  \end{description*}
-  \end{indentsection}
+\inlineheadsection
+  {Natural languages:}
+  {Dutch \emph{(mother tongue)}, English \emph{(full professional proficiency)}, German \emph{(limited working proficiency)}, French \emph{(elementary proficiency)} and Mandarin Chinese \emph{(beginner)}.}
 
+\vspace{-0.1em} \hrule \vspace{-0.4em} \subsection*{Interests}
 
-\vspace{0.5em} \hrule \vspace{-0.4em} \subsection*{Interests}
-
-  \begin{indentsection}{\parindent}
-  \begin{description*}
-    \item[Non-exhaustive and in alphabetical order:]
-    art, Buddhism, cryptography, music, open source, philosophy, software engineering, travel, typography (e.g.\ graphic design, \LaTeX), \acr{UX} and vegetarian cooking.
-  \end{description*}
-  \end{indentsection}
+\inlineheadsection
+  {Non-exhaustive and in alphabetical order:}
+  {Art, Buddhism, cryptography, music, open source, philosophy, software engineering, travel, typography (e.g.\ graphic design, \LaTeX), \acr{UX} and vegetarian cooking.}
 
 
 \end{document}
