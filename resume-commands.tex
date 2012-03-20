@@ -8,16 +8,20 @@
 
 % vim:set ft=tex:
 
-% \documentclass[10pt,a4paper]{article}  -- i do this in the document itself
+% \documentclass[10pt,a4paper]{article}  % i do this in the document itself
 
 % some have defaults values that can be change from the documents i guess
 \usepackage[a4paper,margin=0.75in]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage{mdwlist}
-\usepackage{multicol}
+\usepackage{mdwlist}  % for lists with a inline heading and indented content (see Experiences)
+\usepackage{multicol}  % for multiple column text
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{relsize}  % for \textscale, which I prefer over \sc (small caps), see my \acr command
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+\usepackage{longtable}  % to create tables that span over multiple pages
 
 \usepackage[pdftex]{hyperref}  % yups, URLs everwhere...
 \usepackage{xcolor}  % ... and color them links
@@ -53,43 +57,35 @@
 \setlength{\tabcolsep}{0em}
 \xspaceskip7pt  % some more spacing between sentences (use "i.e.\ " or "with SQL\@. " in case of errors)
 
-% was only used for 'EC2', and caused and error, so commented it out
-% % capnums command, for new/lining/capital numbers
-% \newcommand*\capnums[1]{{\fontencoding{T1}\fontfamily{pplx}\selectfont #1}}
-
 % acr command, to quickly mark acronyms for special formatting
 \newcommand*\acr[1]{\textscale{.85}{#1}}
+
+% pretty bullet (created from a much smaller centerdot), \sbull contains its spacing
+\newcommand*\bull{\raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}}}
+\newcommand*\sbull{\ \ \bull \ \ }
+
 
 % indentsection style, used for sections that aren't already in lists
 % that need indentation to the level of all text in the document
 \newenvironment{indentsection}[1]%
 {\begin{list}{}%
-  {\setlength{\leftmargin}{#1}}%
+  {\setlength{\leftmargin}{#1}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}%
   \item[]%
 }
 {\end{list}}
 
-% opposite of above; bump a section back toward the left margin
-\newenvironment{unindentsection}[1]%
-{\begin{list}{}%
-  {\setlength{\leftmargin}{-0.5#1}}%
-  \item[]%
-}
-{\end{list}}
+% it seems not to work when simply using \parindent...
+\newlength{\newparindent}
+\addtolength{\newparindent}{\parindent}
 
 % headerrow command, used for a new employer
-\newcommand{\headerrow}[2]
-{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-  \textscale{1.08}{\textbf{#1}} &
-  {#2} \\
-\end{tabular*}}
+\newcommand{\headedsection}[3]{\begin{indentsection}{\newparindent} \textscale{1.1}{#1} \hfill #2 #3 \end{indentsection}}
 
 % subheaderrow command, used for a new position
-\newcommand{\subheaderrow}[2]
-{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-  \emph{#1} &
-  \emph{#2} \\
-\end{tabular*}}
+\newcommand{\headedsubsection}[3]{\begin{indentsection}{\newparindent} \textbf{#1} \hfill \emph{#2} #3 \end{indentsection} }
+
+% body text, what the headers need to be headers
+\newcommand{\bodytext}[1]{\begin{indentsection}{\newparindent} #1 \end{indentsection}}
 
 % CPP command, make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}{C\nolinebreak[4]\hspace{-.04em}\raisebox{.20ex}{\footnotesize\bf ++}}

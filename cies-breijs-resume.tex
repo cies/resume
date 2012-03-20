@@ -10,33 +10,31 @@
 
 \documentclass[10pt,a4paper]{article}
 
-% include the other `tex` file
+% include the other `tex` file that takes care of loading packages and defining commands
 \include{resume-commands}
-
 
 
 \begin{document}
 
 
-
 \hspace{-\parindent}{\LARGE \textbf{Cies Breijs}}\ \ \ \emph{June 12, 1982}
 
 \vspace{0.3em}
-\hspace{-\parindent}\href{mailto:cies.at.kde.dot.nl}{cies$\,\!$@$\,\!$kde.nl}\ \ \textbullet  % email address obfuscated
-\ \ \textsmaller{+}31.646469087\ \ \textbullet
-\ \ \textsmaller{+}31.10.4226281\ \ \textbullet
-\ \ \href{http://www.linkedin.com/in/ciesbreijs}{www.linkedin.com/in/ciesbreijs}
+% TODO: move to sbull
+\hspace{-\parindent}\href{mailto:cies.at.kde.dot.nl}{cies\mbox{}@\mbox{}kde.nl}\sbull % email address obfuscated
+\textsmaller{+}31.646469087\sbull
+cies010 \emph{(Skype)}\sbull
+\href{http://www.linkedin.com/in/ciesbreijs}{www.linkedin.com/in/ciesbreijs}
 \\
-Akkerwindestraat 1\ \ \textbullet
-\ \ 3051\thinspace {\sc la}\ \ \textbullet
-\ \ Rotterdam\ \ \textbullet
-\ \ The Netherlands
-\vspace{0.9em}
+Mathenesserplein 84\sbull
+3022\thinspace {\sc ld}\sbull
+Rotterdam\sbull
+The Netherlands
 
 
-\hrule \vspace{-0.4em} \subsection*{Summary}
+\vspace{0.9em} \hrule \vspace{-0.4em} \subsection*{Summary}
 
-\vspace{-1.1em}
+\vspace{-1.3em}
 \begin{multicols}{2}
 \noindent \emph{Creative software engineer with roots in the open source (\acr{FLOSS}) movement, an entrepreneurial mindset and a passion for user/customer centered software development.}
 \\
@@ -55,182 +53,161 @@ Upon return from my travels I joined Zarafa, one of the largest open source soft
 
 \hrule \vspace{-0.4em} \subsection*{Experience}
 
-\begin{itemize} \parskip=0.1em
-
-  \item  % Intellecap/ISTPL
-  \headerrow
-    {\href{http://www.intellecap.com}{Intellecap}/\href{http://istpl.in}{\acr{ISTPL}}}
-    {\sc Mumbai, Pune \& Hyderabad, India}
-  \\
-  \subheaderrow
+\headedsection
+  {\href{http://www.intellecap.com}{Intellecap}/\href{http://istpl.in}{\acr{ISTPL}}}
+  {\textsc{Mumbai, Pune \& Hyderabad, India}} {%
+  \headedsubsection
     {\acr{IT} Consultant}
     {Nov \apo08 -- Feb \apo09}
-  Intellecap is a social-sector advisory firm serving corporates, non-profits, development agencies and governments working in developing markets. I assessed their software development team and methodologies, trained their developers and build several web applications. One of those apps is \href{http://www.mostfit.org}{Mostfit}, an open source \acr{MIS} for \href{http://en.wikipedia.org/wiki/Microcredit}{microcredit} lenders.
-  \\
-  \subheaderrow
+    {\bodytext{Intellecap is a social-sector advisory firm serving corporates, non-profits, development agencies and governments working in developing markets. I assessed their software development team and methodologies, trained their developers and build several web applications. One of those apps is \href{http://www.mostfit.org}{Mostfit}, an open source \acr{MIS} for \href{http://en.wikipedia.org/wiki/Microcredit}{microcredit} lenders.}}
+
+  \headedsubsection
     {\acr{IT} \& Strategy Consultant}
     {Jan \apo10 -- Aug \apo11}
-  \href{http://www.mostfit.org}{Mostfit} became a success and I was called in to solve several technical challenges, look at potential growth strategies, and assist in making a business case for this product in a company of its own.
-  \\
-  \subheaderrow
+    {\bodytext{\href{http://www.mostfit.org}{Mostfit} became a success and I was called in to solve several technical challenges, look at potential growth strategies, and assist in making a business case for this product in a company of its own.}}
+
+  \headedsubsection
     {Chief Technology Officer}
     {Oct \apo11 -- present}
-  Joined the \acr{C}-family to make \href{http://www.mostfit.org}{Mostfit} the nr.1 software solution for micro credit lenders around the globe.
+    {\bodytext{Joined the \acr{C}-family to make \href{http://www.mostfit.org}{Mostfit} the nr.1 software solution for micro credit lenders around the globe.}}
+}
 
-  \item  % Zarafa
-  \headerrow
-    {\href{http://www.zarafa.com}{Zarafa}}
-    {\sc Delft, The Netherlands}
-  \\
-  \subheaderrow
+\headedsection
+  {\href{http://www.zarafa.com}{Zarafa}}
+  {\textsc{Delft, The Netherlands}} {%
+  \headedsubsection
     {\acr{QA} \& Release Manager}
     {Dec \apo09 -- Jan \apo11}
-  Zarafa might be the fastest growing open source product company in Europe. For an open source enthusiast like myself, working with Zarafa is a wonderful opportunity. Reporting directly to the \acr{CEO}, Brian Josef, and working closely with the \acr{CTO}, Steve Hardy, I drove the change to test automation and continuous integration. Furthermore I architected new documentation and translation systems. My Indian work experiences proved particularly valuable, as I was sent to analyze and streamline their outsourced operations in India.
+    {\bodytext{Zarafa might be the fastest growing open source product company in Europe. For an open source enthusiast like myself, working with Zarafa is a wonderful opportunity. Reporting directly to the \acr{CEO}, Brian Josef, and working closely with the \acr{CTO}, Steve Hardy, I drove the change to test automation and continuous integration. Furthermore I architected new documentation and translation systems. My Indian work experiences proved particularly valuable, as I was sent to analyze and streamline their outsourced operations in India.}}
+}
 
-  \item  % Dharma Publishing
-  \headerrow
-    {\href{http://www.dharmapublishing.com}{Dharma Publishing}}
-    {\sc near San Francisco (\acr{CA}), \acr{USA}}
-  \\
-  \subheaderrow
+\headedsection
+  {\href{http://www.dharmapublishing.com}{Dharma Publishing}}
+  {\textsc{near San Francisco (\acr{CA}), \acr{USA}}} {%
+  \headedsubsection
     {\acr{IT} Consultant}
     {Nov \apo09 -- Dec \apo09}
-  Dharma Publishing, the worlds largest Buddhist publisher, is a non-profit, all-volunteer organization that helps to preserve Tibetan Buddhism and culture. I build them a \href{http://www.dharmapublishing.com}{web store}, and moved the infrastructure of all their web media to a nearly zero maintenance setup that they can maintain themselves.
+    {\bodytext{Dharma Publishing, the worlds largest Buddhist publisher, is a non-profit, all-volunteer organization that helps to preserve Tibetan Buddhism and culture. I build them a \href{http://www.dharmapublishing.com}{web store}, and moved the infrastructure of all their web media to a nearly zero maintenance setup that they can maintain themselves.}}
+}
 
-  \item  % KDE
-  \headerrow
-    {\href{http://www.kde.org}{KDE}}
-    {\href{http://edu.kde.org/kturtle}{edu.kde.org/kturtle}}
-  \\
-  \subheaderrow
+\headedsection
+  {\href{http://www.kde.org}{KDE}}
+  {\href{http://edu.kde.org/kturtle}{edu.kde.org/kturtle}} {%
+  \headedsubsection
     {Software Engineer}
     {Dec \apo03 -- present}
-  \KTurtle is an educational programming environment that simplifies learning the basics of programming. At early age I learned programming using \acr{MSX-LOGO}, by creating \KTurtle I want to ensure future generation's access to a similar piece of software. I was honored when \KTurtle got admitted to \acr{KDE} in 2003.
+    {\bodytext{\KTurtle is an educational programming environment that simplifies learning the basics of programming. At early age I learned programming using \acr{MSX-LOGO}, by creating \KTurtle I want to ensure future generation's access to a similar piece of software. I was honored when \KTurtle got admitted to \acr{KDE} in 2003.}}
+}
 
-  \item  % Truetopia Project
-  \headerrow
-    {\href{http://truetopiaproject.org}{Truetopia Project}}
-    {\href{http://truetopiaproject.org}{truetopiaproject.org}}
-  \\
-  \subheaderrow
+\headedsection
+  {\href{http://truetopiaproject.org}{Truetopia Project}}
+  {\href{http://truetopiaproject.org}{truetopiaproject.org}} {%
+  \headedsubsection
     {Initiator}
     {Nov \apo07 -- Apr \apo10}
-  The Truetopia Project is an open source web application (Rails) to facilitate self-governing communities. It provides a workflow for collaborative problem identification and solution design.
+    {\bodytext{The Truetopia Project is an open source web application (Rails) to facilitate self-governing communities. It provides a workflow for collaborative problem identification and solution design.}}
+}
 
-\pagebreak
+%\pagebreak
 
-  \item  % DPU
-  \headerrow
-    {\href{http://www.dpu.ac.th/dpuic}{Dhurakij Pundit University International College}}
-    {\sc Bangkok, Thailand}
-  \\
-  \subheaderrow
+\headedsection
+  {\href{http://www.dpu.ac.th/dpuic}{Dhurakij Pundit University International College}}
+  {\textsc{Bangkok, Thailand}} {%
+  \headedsubsection
     {Guest Lecturer}
     {Sep \apo09}
-  Dr.\@ Pilun Piyasirivej and Mr.\@ Michel Bauwens invited me to give two guest lectures:\ one on the open source movement and one on the semantic web.
+    {\bodytext{Dr.\@ Pilun Piyasirivej and Mr.\@ Michel Bauwens invited me to give two guest lectures:\ one on the open source movement and one on the semantic web.}}
+}
 
-  \item  % Opendream
-  \headerrow
-    {\href{http://www.opendream.th}{Opendream}}
-    {\sc Bangkok, Thailand}
-  \\
-  \subheaderrow
+\headedsection
+  {\href{http://www.opendream.th}{Opendream}}
+  {\textsc{Bangkok, Thailand}} {%
+  \headedsubsection
     {\acr{IT} Consultant}
     {Aug \apo09 -- Sep \apo09}
-  Architected and largely implemented an open source media sharing web service (\acr{REST} api) that facilitates video uploads, transcoding and streaming. Coached their development team on system design, ruby development (using Merb/Rails) and testing strategies such as \acr{TDD}/\acr{BDD}.
+    {\bodytext{Architected and largely implemented an open source media sharing web service (\acr{REST} api) that facilitates video uploads, transcoding and streaming. Coached their development team on system design, ruby development (using Merb/Rails) and testing strategies such as \acr{TDD}/\acr{BDD}.}}
+}
 
-  \item  % Commuun
-  \headerrow
-    {\href{http://www.commuun.nl}{Commuun}}
-    {\sc Rotterdam, The Netherlands}
-  \\
-  \subheaderrow
+\headedsection
+  {\href{http://www.commuun.nl}{Commuun}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
     {Senior Visionary}
     {Jul \apo06 -- Sep \apo09}
-  I helped Peter Duijnstee (the proprietor of Commuun) with setting up the technical infrastructure, defining the core competences and creating a brand for his internet company. We collaborated on several web applications (all Rails apps) within the context of his company.
+    {\bodytext{I helped Peter Duijnstee (the proprietor of Commuun) with setting up the technical infrastructure, defining the core competences and creating a brand for his internet company. We collaborated on several web applications (all Rails apps) within the context of his company.}}
+}
 
-  \item  % EUR
-  \headerrow
-    {\href{http://www.eur.nl}{Erasmus University Rotterdam}}
-    {\sc Rotterdam, The Netherlands}
-  \\
-  \subheaderrow
+\headedsection
+  {\href{http://www.eur.nl}{Erasmus University Rotterdam}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
     {Guest Lecturer}
     {Jul \apo06 -- Jul \apo09}
-  Yearly guest lectures on the phenomenon of open source, as part of the first year curriculum of \emph{Computer Science \& Economics}.
+    {\bodytext{Yearly guest lectures on the phenomenon of open source, as part of the first year curriculum of \emph{Computer Science \& Economics}.}}
+}
 
-  \item  % LIP
-  \headerrow
-    {LIP Automatisering}
-    {\sc Breda, The Netherlands}
-  \\
-  \subheaderrow
+\headedsection
+  {LIP Automatisering}
+  {\textsc{Breda, The Netherlands}} {%
+  \headedsubsection
     {Software Auditor}
     {Sep \apo06}
-  Audited their flag ship product \emph{\acr{LIP} Suite}:\ an \acr{ERP} solution for construction companies.
+    {\bodytext
+      {Audited their flag ship product \emph{\acr{LIP} Suite}:\ an \acr{ERP} solution for construction companies.}}
+}
 
-  \item  % The Health Agency
-  \headerrow
-    {\href{http://www.thehealthagency.com}{The Health Agency}}
-    {\sc Delft \& Rotterdam, The Netherlands}
-  \\
-  \subheaderrow
+\headedsection
+  {\href{http://www.thehealthagency.com}{The Health Agency}}
+  {\textsc{Delft \& Rotterdam, The Netherlands}} {%
+  \headedsubsection
     {Software Engineer}
     {Jun \apo05 -- Feb \apo06}
-  {I worked on their innovative content management system (\acr{CMS}) targeted towards the health care sector. It is developed from scratch in Python and makes heavy use of Postgre\acr{SQL}, \acr{XML}/\acr{XSLT} and TwistedMatrix.
-  \vspace{0.2em}}
-  \subheaderrow
+    {\bodytext{I worked on their innovative content management system (\acr{CMS}) targeted towards the health care sector. It is developed from scratch in Python and uses Postgre\acr{SQL}, \acr{XML}/\acr{XSLT} and Twisted.}}
+
+  \headedsubsection
     {Software Auditor}
     {Dec \apo06}
-  Assessed their Python/Zope/\acr{Z}o\acr{DB}-based web framework re-engineering project.
+    {\bodytext{Assessed their Python/Zope/\acr{Z}o\acr{DB}-based web framework re-engineering project.}}
+}
 
-  \begin{center}
-    \emph{Please refer to \href{http://www.linkedin.com/in/ciesbreijs}{my Linkedin profile} for the complete list of work experiences along with recommendations.}
-  \end{center}
+\begin{center}
+  \emph{Please refer to \href{http://www.linkedin.com/in/ciesbreijs}{my Linkedin profile} for the complete list of work experiences along with recommendations.}
+\end{center}
 
-\end{itemize}
-\vspace{-0.2em}
 
-\hrule \vspace{-0.4em} \subsection*{Education}
+\vspace{-0.2em} \hrule \vspace{-0.4em} \subsection*{Education}
 
-\begin{itemize} \parskip=0.1em
-
-  \item  % EUR
-  \headerrow
-    {Erasmus University Rotterdam}
-    {\sc Rotterdam, The Netherlands}
-  \subheaderrow
+\headedsection
+  {Erasmus University Rotterdam}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
     {Bachelor degree in Computer Science \& Economics}
     {2004 -- 2007}
-  Focussed on the economics of open source, rapid application development (\acr{RAD}) and the semantic web technology stack (\acr{RDF}/\acr{RDFS}, \acr{OWL} and \acr{SPARQL}).
+    {\bodytext{Focussed on the economics of open source, rapid application development (\acr{RAD}) and the semantic web technology stack (\acr{RDF}/\acr{RDFS}, \acr{OWL} and \acr{SPARQL}).}}
+}
 
-  \item  % TUDelft
-  \headerrow
-    {Technical University Delft}
-    {\sc Delft, The Netherlands}
-  \\
-  \subheaderrow
+\headedsection
+  {Technical University Delft}
+  {\textsc{Delft, The Netherlands}} {%
+  \headedsubsection
     {Industrial Design Engineering (discontinued)}
-    {2001 -- 2002}
+    {2001 -- 2002} {}
+}
 
-  \item  % Libanon
-  \headerrow
-    {Libanon Lyceum}
-    {\sc Rotterdam, The Netherlands}
-  \\
-  \subheaderrow
+\headedsection
+  {Libanon Lyceum}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
     {\acr{VWO}}
-    {1994 -- 2000}
+    {1994 -- 2000} {}
+}
 
-\end{itemize}
-\vspace{-0.3em}
-
-\hrule \vspace{-0.4em} \subsection*{Skills}
+\vspace{0.3em} \hrule \vspace{-0.4em} \subsection*{Skills}
 
   \begin{indentsection}{\parindent}  % Technical Secialties
   \begin{description*}
     \item[Technical specialties:]
-    Software design and implementation, with(in) a team. Loves Ruby/Python/Java, knows \CPP, flirted with Haskell. Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mainly jQuery). Linux administration skills:\ bash, Apache, My\acr{SQL}, Postgres\acr{SQL}, virtualization/cloud (Open\acr{VZ}, \acr{VM}ware, \acr{KVM}, Xen and \acr{EC}2), datacenter automation (Puppet and Chef), continuous integration (Hudson).
+    Software design and implementation, with(in) a team. I love Ruby/Python/Java, know \CPP and always flirt with Haskell. Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mainly jQuery). Linux administration skills:\ bash, Apache, My\acr{SQL}, Postgres\acr{SQL}, virtualization/cloud (Open\acr{VZ}, \acr{VM}ware, \acr{KVM}, Xen and \acr{EC}2), datacenter automation (Puppet and Chef), continuous integration (Hudson).
   \end{description*}
   \end{indentsection}
 
@@ -242,7 +219,7 @@ Upon return from my travels I joined Zarafa, one of the largest open source soft
   \end{indentsection}
 
 
-\hrule \vspace{-0.4em} \subsection*{Interests}
+\vspace{0.5em} \hrule \vspace{-0.4em} \subsection*{Interests}
 
   \begin{indentsection}{\parindent}
   \begin{description*}
@@ -250,8 +227,6 @@ Upon return from my travels I joined Zarafa, one of the largest open source soft
     art, Buddhism, cryptography, music, open source, philosophy, software engineering, travel, typography (e.g.\ graphic design, \LaTeX), \acr{UX} and vegetarian cooking.
   \end{description*}
   \end{indentsection}
-
-
 
 
 \end{document}
