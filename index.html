@@ -28,6 +28,7 @@
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
   </style>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quicksand:300,400,700" />
 </head>
 
 <body>
@@ -49,7 +50,10 @@
 
     
       <h2>Step One: instant gratification!</h2>
-      <p>With this link you can grab my resume all in one file.</p>
+      <p>With in the text area below you can grab my resume all merged in one file.</p>
+      <textarea id="copyspot"></textarea>
+      <i>Focus on the textarea (click it), select all (CTRL-A or CMD-A), copy to clipboard (CTRL-C or CMD-C).
+      <br/>
       <p>Now go to <a href="http://www.scribtex.com">ScribTex.com</a> and hit the "Try it now" button.
       Click the <tt>main.tex</tt> file and replace the content with what you just copied.</p>
       <p>Hit the "Compile" button to see it.</p>
@@ -75,6 +79,18 @@
 
 
   </div>
-
+<script src="http://code.google.com/apis/libraries/devguide.html#jquery"></script>
+<script>
+$(document).ready(function () {
+      var content = 'https://raw.github.com/cies/resume/master/cies-breijs-resume.tex';
+      var commands = 'https://raw.github.com/cies/resume/master/resume-commands.tex';
+      $.get(content, {}, function (content_result) {
+         $.get(commands, {}, function (commands_result) {
+            var full_doc = content_result.replace('\\include{resume-commands}', '\n%%%% INCLUSION\n'+command_result+'\n%%%%% END INCLUSION\n');
+            $('#copy-spot').html(full_doc);
+         });
+      });
+});
+</script>
 </body>
 </html>
