@@ -51,8 +51,8 @@
     
       <h2>Step One: instant gratification!</h2>
       <p>With in the text area below you can grab my resume all merged in one file.</p>
-      <textarea id="copyspot"></textarea>
-      <i>Focus on the textarea (click it), select all (CTRL-A or CMD-A), copy to clipboard (CTRL-C or CMD-C).
+      <textarea id="copyspot" rows="10" cols="50"></textarea>
+      <p><i>Focus on the textarea (click it), select all (CTRL-A or CMD-A), copy to clipboard (CTRL-C or CMD-C).</i></p>
       <br/>
       <p>Now go to <a href="http://www.scribtex.com">ScribTex.com</a> and hit the "Try it now" button.
       Click the <tt>main.tex</tt> file and replace the content with what you just copied.</p>
@@ -90,6 +90,7 @@ $(document).ready(function () {
             $('#copy-spot').html(full_doc);
          });
       });
+      $('#copy-spot').html(full_doc);
 });
 </script>
 </body>
