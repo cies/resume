@@ -1,7 +1,7 @@
 # My resume in LaTeX
 
- * Results in a [beautifully typesetted 2 page pdf file](https://github.com/cies/resume/raw/master/cies-breijs-resume.pdf) (click the link to download mine)
- * Compiles with simple apt-get instruction (below) on a recent version of Ubuntu or other distro with `tex-live` packages
+ * Results is a [nicely typesetted 2 page pdf file](https://github.com/cies/resume/blob/master/cies-breijs-resume.pdf?raw=true) (click the link to download mine)
+ * Compiles out-of-the-box on any recent version of Ubuntu or other distro with `tex-live` packages
  * Is maybe the basis for yours! (fork-it)
 
 
@@ -12,7 +12,7 @@ It uses TeX Gyre Pagella, a font similar to Pallatino that is often used for boo
 
 Except the horizonal lines and bullets everything is made of text.  It uses hyper-refs where applicable, all in dark blue so 'print safe'.
 
-It only relies on is open source and is readily available in recent versions of Ubuntu.
+It only relies on open source stuff.
 
 
 
