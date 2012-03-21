@@ -1,7 +1,7 @@
 # My resume in LaTeX
 
  * Results is a [nicely typesetted 2 page pdf file](https://github.com/cies/resume/blob/master/cies-breijs-resume.pdf?raw=true) (click the link to download mine)
- * Compiles out-of-the-box on any recent version of Ubuntu or other distro with `tex-live` packages
+ * Compiles out-of-the-box on any recent version of Ubuntu and probably without much trouble on any system with the `tex-live` packages
  * Is maybe the basis for yours! (fork-it)
 
 
@@ -29,7 +29,8 @@ I don't use `pdflatex` but `XeTeX` since it allows me to easily use Pagella's lo
 
 # ToDo
 
-  * (none at the moment)
+  * Make it work with [ScribTex](http://www.scribtex.com/) (free latex
+    webservice)
 
 
 # TaDa

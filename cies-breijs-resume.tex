@@ -1,26 +1,31 @@
 % LaTeX source of my resume
 % =========================
 
-% commented ;)
+% Commented for easy reuse... ;)
 
-% see the README.md file for more info
+% See the `README.md` file for more info.
 
 
-% vim:set ft=tex:
-
+% start a document with the here given default font size and paper size
 \documentclass[10pt,a4paper]{article}
 
 % include the `tex` instructions that takes care of loading packages and defining commands
 \include{resume-commands}
 
 
-\begin{document}
 
-\maintitle{Cies Breijs}{June 12, 1982}
+\begin{document}  % begin the content of the document
 
-\nobreakvspace{0.3em}
+\maintitle{Cies Breijs}{June 12, 1982}  % title on top of the document
 
-\noindent\href{mailto:cies.at.kde.dot.nl}{cies\mbox{}@\mbox{}kde.nl}\sbull % email address obfuscated
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:cies.at.kde.dot.nl}{cies\mbox{}@\mbox{}kde.nl}\sbull
 \textsmaller{+}31.646469087\sbull
 cies010 \emph{(Skype)}\sbull
 \href{http://www.linkedin.com/in/ciesbreijs}{www.linkedin.com/in/ciesbreijs}
@@ -30,13 +35,12 @@ Mathenesserplein 84\sbull
 Rotterdam\sbull
 The Netherlands
 
+\spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
 
-\spacedhrule{0.9em}{-0.4em}
+\roottitle{Summary}  % a root section title
 
-\roottitle{Summary}
-
-\vspace{-1.3em}
-\begin{multicols}{2}
+\vspace{-1.3em}  % some vertical spacing
+\begin{multicols}{2}  % open a multicolumn environment
 \noindent \emph{Creative software engineer with roots in the open source movement, an entrepreneurial mindset and a passion for user/customer centered software development.}
 \\
 \\
@@ -56,11 +60,11 @@ Upon return from my travels I joined Zarafa, one of the largest open source soft
 
 \roottitle{Experience}
 
-\headedsection
+\headedsection  % sets the header for the section and includes any subsections
   {\href{http://www.intellecap.com}{Intellecap}/\href{http://istpl.in}{\acr{ISTPL}}}
   {\textsc{Mumbai, Pune \& Hyderabad, India}} {%
 
-  \headedsubsection
+  \headedsubsection  % sets the header for a subsection and contains usually body text
     {\acr{IT} Consultant}
     {Nov \apo08 -- Feb \apo09}
     {\bodytext{Intellecap is a social-sector advisory firm serving corporates, non-profits, development agencies and governments working in developing markets. I assessed their software development team and methodologies, trained their developers and build several web applications. One of those apps is \href{http://www.mostfit.org}{Mostfit}, an open source \acr{MIS} for \href{http://en.wikipedia.org/wiki/Microcredit}{microcredit} lenders.}}
@@ -212,7 +216,7 @@ Upon return from my travels I joined Zarafa, one of the largest open source soft
 
 \roottitle{Skills}
 
-\inlineheadsection
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
   {Technical specialties:}
   {Software design and implementation, with(in) a team. I love Ruby/Python/Java, know \CPP~and flirt with Haskell. Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mainly jQuery). Linux administration skills:\ bash, Apache, My\acr{SQL}, Postgres\acr{SQL}, virtualization/cloud (Open\acr{VZ}, \acr{VM}ware, \acr{KVM}, Xen and \acr{EC}2), datacenter automation (Puppet and Chef), continuous integration (Hudson).}
 
