@@ -1,3 +1,4 @@
+%%%% GENERATED FILE - MODIFICATIONS MAY BE LOST %%%%
 % LaTeX source of my resume
 % =========================
 
@@ -10,7 +11,140 @@
 \documentclass[10pt,a4paper]{article}
 
 % include the `tex` instructions that takes care of loading packages and defining commands
-\include{resume-commands}
+
+% some commands for making a LaTeX resume
+% =======================================
+
+% commented ;)
+
+% see the README.md file for more info
+
+
+% vim:set ft=tex:
+
+% \documentclass[10pt,a4paper]{article}  % i do this in the document itself
+
+
+%%% LOAD AND SETUP PACKAGES
+
+\usepackage[a4paper,margin=0.75in]{geometry}
+\usepackage{mdwlist}   % to finetue lists with a inline heading and indented content (see Experiences)
+\usepackage{multicol}  % for multiple column text
+\usepackage{relsize}   % for \textscale, which I prefer over \sc (small caps), see my \acr command
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+\usepackage[pdftex]{hyperref}  % yups, URLs everwhere...
+\usepackage{xcolor}  % ... and color them links
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
+
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  \addfontfeature{Style=Historic}
+  \setmainfont
+    [ ExternalLocation ,
+      Mapping = tex-text ,
+      Numbers = OldStyle ,
+      Ligatures= {Common,Historical,Contextual,Rare} ,
+      BoldFont = texgyrepagella-bold.otf ,
+      ItalicFont = texgyrepagella-italic.otf ,
+      BoldItalicFont = texgyrepagella-bolditalic.otf ]
+    {texgyrepagella-regular.otf}
+  % use this for the libertine font (has more lignatures), install 'ttf-linux-libertine' on ubuntu
+  % \setmainfont
+  %   [ ExternalLocation = /usr/share/fonts/truetype/linux-libertine/ ,
+  %     Mapping = tex-text ,
+  %     Numbers = OldStyle ,
+  %     Ligatures= {Common,Historical,Contextual,Rare} ,
+  %     BoldFont = LinLibertine_Bd.ttf ,
+  %     ItalicFont = LinLibertine_It.ttf ,
+  %     BoldItalicFont = LinLibertine_BI.ttf ]
+  %   {LinLibertine_Re.ttf}
+\else
+  \usepackage{tgpagella}  % this case we lack lower case numbers, ligatures and some typographic niceties
+\fi
+
+
+
+%%% DOCUMENT WIDE STYLING
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+\xspaceskip7pt  % some more spacing between sentences (use "i.e.\ " or "with SQL\@. " in case of errors)
+
+
+%%% CUSTOM COMMANDS
+
+% main title (name) with subtitle (date)
+\newcommand*\maintitle[2]{\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
+
+% title for the root sections (experience, education, etc) of the resume
+\newcommand*\roottitle[1]{\subsection*{#1}\vspace{-0.3em}\nopagebreak[4]}
+
+% acr command, to quickly mark acronyms for special formatting
+\newcommand*\acr[1]{\textscale{.85}{#1}}
+
+% pretty bullet (created from a much smaller centerdot), \sbull contains its spacing
+\newcommand*\bull{\raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}}}
+\newcommand*\sbull{\ \ \bull \ \ }
+
+% it seems not to work when simply using \parindent...
+\newlength{\newparindent}
+\addtolength{\newparindent}{\parindent}
+
+% a double \parindent...
+\newlength{\doubleparindent}
+\addtolength{\doubleparindent}{\parindent}
+\addtolength{\doubleparindent}{\parindent}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}%
+{\begin{list}{}%
+  {\setlength{\leftmargin}{\newparindent}\setlength{\parsep}{0pt}\setlength{\parskip}{0pt}\setlength{\itemsep}{0pt}\setlength{\topsep}{0pt}}%
+}
+{\end{list}}
+
+% headerrow command, used for a new employer
+\newcommand{\headedsection}[3]{\begin{indentsection} \item[] \textscale{1.1}{#1} \hfill #2 #3 \end{indentsection}\nopagebreak[4]}
+
+% subheaderrow command, used for a new position
+\newcommand{\headedsubsection}[3]{\begin{indentsection} \item[] \textbf{#1} \hfill \emph{#2} #3 \end{indentsection}\nopagebreak[4]}
+
+% body text (indented)
+\newcommand{\bodytext}[1]{\begin{indentsection} \item[] #1 \end{indentsection}}
+
+% \vspace variaties
+\newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]}
+\newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]}
+
+% \spacedhrule (top, bottom)
+\newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}}
+
+% \inlineheadsection command, used for a new employer
+\newcommand{\inlineheadsection}[2]{\begin{basedescript}{\setlength{\leftmargin}{\doubleparindent}} \item[\hspace{\newparindent}\textbf{#1}] #2 \end{basedescript}}
+
+% apo command, for an apostrophe that looks good on old style nums
+\newcommand{\apo}{\raisebox{-.18ex}{'}{\hspace{-.1em}}}
+
+
+%%% MORE SPECIFIC COMMANDS
+
+% CPP command (found it in some corner of the internet and decided to use it)
+\newcommand{\CPP}{C\nolinebreak[4]\hspace{-.04em}\raisebox{.20ex}{\footnotesize\bf ++}}
+
+% KTurtle command :)
+\newcommand{\KTurtle}{\acr{KT}urtle }
+
+
+
+% % these are in the document itself:
+%
+% \begin{document}
+% ...the document text...
+% \end{document}
 
 
 
