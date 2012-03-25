@@ -116,13 +116,13 @@
 {\end{list}}
 
 % headerrow command, used for a new employer
-\newcommand{\headedsection}[3]{\begin{indentsection} \item[] \textscale{1.1}{#1} \hfill #2 #3 \end{indentsection}\nopagebreak[4]}
+\newcommand{\headedsection}[3]{\nopagebreak[4]\begin{indentsection} \item[] \textscale{1.1}{#1} \hfill #2 #3 \end{indentsection}\nopagebreak[4]}
 
 % subheaderrow command, used for a new position
-\newcommand{\headedsubsection}[3]{\begin{indentsection} \item[] \textbf{#1} \hfill \emph{#2} #3 \end{indentsection}\nopagebreak[4]}
+\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection} \item[] \textbf{#1} \hfill \emph{#2} #3 \end{indentsection}\nopagebreak[4]}
 
 % body text (indented)
-\newcommand{\bodytext}[1]{\begin{indentsection} \item[] #1 \end{indentsection}}
+\newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection} \item[] #1 \end{indentsection}\pagebreak[2]}
 
 % \vspace variaties
 \newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]}
