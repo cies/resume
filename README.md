@@ -1,4 +1,4 @@
-# My resume in LaTeX
+# My Latex resume
 
  * Is a [nicely typesetted 2 page pdf file](https://github.com/cies/resume/blob/master/cies-breijs-resume.pdf?raw=true) (click the link to download mine)
  * Compiles with or without installing software (read more below)
@@ -11,11 +11,11 @@ two page resume.  Naturally turned to Latex.
 Looking at some Latex resumes online I found non that I really liked, so
 I gave it my best shot.  I made it into a well documented project as I
 expect more geeks want their resume to be typeset like this.  I don't really
-feel like making it into 'library', unless someone can convince me of the
+feel like making it into library, unless someone can convince me of the
 benefits; in the meantime just "fork it on GitHub".
 
 It uses TeX Gyre Pagella, a font similar to Pallatino that is often used for
-books.  When compiled with `XeLateX` it has 'lower case numerals', which I
+books.  When compiled with XeLaTeX it has 'lower case numerals', which I
 think look very nice.
 
 Except the horizonal lines and bullets everything is made of text.
