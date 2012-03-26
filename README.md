@@ -52,7 +52,7 @@ The build script `build.sh` automatically combines the
 
 #### Using XeLaTeX
 
-XeLaTeX is the version of Latex great font rendering fuctionality (unicode, bidi,
+XeLaTeX is a version of Latex with great font rendering fuctionality (unicode, bidi,
 special font features).  Since my resume uses 'lower case numerals' it
 looks slightly better with XeLaTeX.
 
@@ -62,6 +62,8 @@ directory to the root of the project and do:
         sudo apt-get install texlive-xetex tex-gyre texlive-latex-recommended
         ./build.sh
 
+If all went well an updated version of the PDF is found in your current
+working directory.
 
 
 ## ToDo
