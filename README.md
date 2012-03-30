@@ -73,6 +73,7 @@ working directory.
 
 ## TaDa
 
+  * Fixed all outstanding spacing issues (thanks to the `\sloppy` command)
   * Works out of the box with ScribTex
   * Separate file for command definitions (so we can collaborate on that file using forks and pull-requests)
   * Allow ligatures (not very noticable with the Pagella font, one could try Libertine or Hoefler)

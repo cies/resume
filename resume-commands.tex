@@ -116,13 +116,13 @@
 {\end{list}}
 
 % headerrow command, used for a new employer
-\newcommand{\headedsection}[3]{\nopagebreak[4]\begin{indentsection} \item[] \textscale{1.1}{#1} \hfill #2 #3 \end{indentsection}\nopagebreak[4]}
+\newcommand{\headedsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textscale{1.1}{#1}\hfill#2#3\end{indentsection}\nopagebreak[4]}
 
 % subheaderrow command, used for a new position
-\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection} \item[] \textbf{#1} \hfill \emph{#2} #3 \end{indentsection}\nopagebreak[4]}
+\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}\hfill\emph{#2}#3\end{indentsection}\nopagebreak[4]}
 
 % body text (indented)
-\newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection} \item[] #1 \end{indentsection}\pagebreak[2]}
+\newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection}\item[]#1\end{indentsection}\pagebreak[2]}
 
 % \vspace variaties
 \newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]}
@@ -132,16 +132,18 @@
 \newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}}
 
 % \inlineheadsection command, used for a new employer
-\newcommand{\inlineheadsection}[2]{\begin{basedescript}{\setlength{\leftmargin}{\doubleparindent}} \item[\hspace{\newparindent}\textbf{#1}] #2 \end{basedescript}}
+\newcommand{\inlineheadsection}[2]{\begin{basedescript}{\setlength{\leftmargin}{\doubleparindent}}\item[\hspace{\newparindent}\textbf{#1}]#2\end{basedescript}\vspace{-1.7em}}
 
 % apo command, for an apostrophe that looks good on old style nums
 \newcommand{\apo}{\raisebox{-.18ex}{'}{\hspace{-.1em}}}
 
+% non space that allows line breaks
+\newcommand*{\nsp}{\hskip0pt}
 
 %%% MORE SPECIFIC COMMANDS
 
 % CPP command (found it in some corner of the internet and decided to use it)
-\newcommand{\CPP}{C\nolinebreak[4]\hspace{-.04em}\raisebox{.20ex}{\footnotesize\bf ++}}
+\newcommand{\CPP}{C\nolinebreak[4]\hspace{-.04em}\raisebox{.20ex}{\footnotesize\bf++} }
 
 % KTurtle command :)
 \newcommand{\KTurtle}{\acr{KT}urtle }
