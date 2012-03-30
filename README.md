@@ -73,6 +73,7 @@ working directory.
 
 ## TaDa
 
+  * Made switching to the [Linux Libertine](http://www.linuxlibertine.org) font easier
   * Fixed all outstanding spacing issues (thanks to the `\sloppy` command)
   * Works out of the box with ScribTex
   * Separate file for command definitions (so we can collaborate on that file using forks and pull-requests)

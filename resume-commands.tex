@@ -50,26 +50,19 @@
 \usepackage{ifxetex}
 \ifxetex
   \usepackage{fontspec}
-  \addfontfeature{Style=Historic}
   \setmainfont
     [ ExternalLocation ,
-      Mapping = tex-text ,
-      Numbers = OldStyle ,
-      Ligatures= {Common,Historical,Contextual,Rare} ,
-      BoldFont = texgyrepagella-bold.otf ,
-      ItalicFont = texgyrepagella-italic.otf ,
-      BoldItalicFont = texgyrepagella-bolditalic.otf ]
+      Mapping          = tex-text ,
+      Numbers          = OldStyle ,
+      Ligatures        = {Common,Contextual} ,
+      BoldFont         = texgyrepagella-bold.otf ,
+      ItalicFont       = texgyrepagella-italic.otf ,
+      BoldItalicFont   = texgyrepagella-bolditalic.otf ]
     {texgyrepagella-regular.otf}
-  % use this for the libertine font (has more lignatures), install 'ttf-linux-libertine' on ubuntu
-  % \setmainfont
-  %   [ ExternalLocation = /usr/share/fonts/truetype/linux-libertine/ ,
-  %     Mapping = tex-text ,
-  %     Numbers = OldStyle ,
-  %     Ligatures= {Common,Historical,Contextual,Rare} ,
-  %     BoldFont = LinLibertine_Bd.ttf ,
-  %     ItalicFont = LinLibertine_It.ttf ,
-  %     BoldItalicFont = LinLibertine_BI.ttf ]
-  %   {LinLibertine_Re.ttf}
+  % Comment out the previous statement and uncomment the following line to use the
+  % Linux Libertine font (it has nice lignatures).
+  % Make sure to have the `ttf-linux-libertine` package installed on Ubuntu.
+%  \setmainfont[Mapping=tex-text, Numbers=OldStyle, Ligatures={Common,Contextual}]{Linux Libertine O}
 \else
   \usepackage{tgpagella}  % this case we lack lower case numbers, ligatures and some typographic niceties
 \fi

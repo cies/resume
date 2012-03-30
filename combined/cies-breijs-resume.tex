@@ -66,26 +66,19 @@
 \usepackage{ifxetex}
 \ifxetex
   \usepackage{fontspec}
-  \addfontfeature{Style=Historic}
   \setmainfont
     [ ExternalLocation ,
-      Mapping = tex-text ,
-      Numbers = OldStyle ,
-      Ligatures= {Common,Historical,Contextual,Rare} ,
-      BoldFont = texgyrepagella-bold.otf ,
-      ItalicFont = texgyrepagella-italic.otf ,
-      BoldItalicFont = texgyrepagella-bolditalic.otf ]
+      Mapping          = tex-text ,
+      Numbers          = OldStyle ,
+      Ligatures        = {Common,Contextual} ,
+      BoldFont         = texgyrepagella-bold.otf ,
+      ItalicFont       = texgyrepagella-italic.otf ,
+      BoldItalicFont   = texgyrepagella-bolditalic.otf ]
     {texgyrepagella-regular.otf}
-  % use this for the libertine font (has more lignatures), install 'ttf-linux-libertine' on ubuntu
-  % \setmainfont
-  %   [ ExternalLocation = /usr/share/fonts/truetype/linux-libertine/ ,
-  %     Mapping = tex-text ,
-  %     Numbers = OldStyle ,
-  %     Ligatures= {Common,Historical,Contextual,Rare} ,
-  %     BoldFont = LinLibertine_Bd.ttf ,
-  %     ItalicFont = LinLibertine_It.ttf ,
-  %     BoldItalicFont = LinLibertine_BI.ttf ]
-  %   {LinLibertine_Re.ttf}
+  % Comment out the previous statement and uncomment the following line to use the
+  % Linux Libertine font (it has nice lignatures).
+  % Make sure to have the `ttf-linux-libertine` package installed on Ubuntu.
+%  \setmainfont[Mapping=tex-text, Numbers=OldStyle, Ligatures={Common,Contextual}]{Linux Libertine O}
 \else
   \usepackage{tgpagella}  % this case we lack lower case numbers, ligatures and some typographic niceties
 \fi
@@ -132,13 +125,13 @@
 {\end{list}}
 
 % headerrow command, used for a new employer
-\newcommand{\headedsection}[3]{\nopagebreak[4]\begin{indentsection} \item[] \textscale{1.1}{#1} \hfill #2 #3 \end{indentsection}\nopagebreak[4]}
+\newcommand{\headedsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textscale{1.1}{#1}\hfill#2#3\end{indentsection}\nopagebreak[4]}
 
 % subheaderrow command, used for a new position
-\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection} \item[] \textbf{#1} \hfill \emph{#2} #3 \end{indentsection}\nopagebreak[4]}
+\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}\hfill\emph{#2}#3\end{indentsection}\nopagebreak[4]}
 
 % body text (indented)
-\newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection} \item[] #1 \end{indentsection}\pagebreak[2]}
+\newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection}\item[]#1\end{indentsection}\pagebreak[2]}
 
 % \vspace variaties
 \newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]}
@@ -148,7 +141,7 @@
 \newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}}
 
 % \inlineheadsection command, used for a new employer
-\newcommand{\inlineheadsection}[2]{\begin{basedescript}{\setlength{\leftmargin}{\doubleparindent}} \item[\hspace{\newparindent}\textbf{#1}] #2 \end{basedescript}}
+\newcommand{\inlineheadsection}[2]{\begin{basedescript}{\setlength{\leftmargin}{\doubleparindent}}\item[\hspace{\newparindent}\textbf{#1}]#2\end{basedescript}\vspace{-1.7em}}
 
 % apo command, for an apostrophe that looks good on old style nums
 \newcommand{\apo}{\raisebox{-.18ex}{'}{\hspace{-.1em}}}
@@ -373,7 +366,7 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
 }
 
 
-\spacedhrule{0.3em}{-0.4em}
+\spacedhrule{0.5em}{-0.4em}
 
 \roottitle{Skills}
 
@@ -381,14 +374,12 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
   {Technical specialties:}
   {Software design and implementation, with(in) a team. I love Ruby/\nsp Python/\nsp Java/\nsp \CPP and flirt regularly with Haskell. Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mainly jQuery). Linux administration skills:\ bash, Apache, My\acr{SQL}, Postgres\acr{SQL}, virtualization/cloud (Open\acr{VZ}, \acr{VM}ware, \acr{KVM}, Xen and \acr{EC}2), datacenter automation (Puppet and Chef), continuous integration (Hudson/Jenkins).}
 
-\vspace{-1.7em}
-
 \inlineheadsection
   {Natural languages:}
   {Dutch \emph{(mother tongue)}, English \emph{(full professional proficiency)}, German \emph{(limited working proficiency)}, French \emph{(elementary proficiency)} and Mandarin Chinese \emph{(beginner)}.}
 
 
-\spacedhrule{-0.1em}{-0.4em}
+\spacedhrule{1.6em}{-0.4em}
 
 \roottitle{Interests}
 
