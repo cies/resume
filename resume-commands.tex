@@ -63,8 +63,10 @@
   % Linux Libertine font (it has nice lignatures).
   % Make sure to have the `ttf-linux-libertine` package installed on Ubuntu.
 %  \setmainfont[Mapping=tex-text, Numbers=OldStyle, Ligatures={Common,Contextual}]{Linux Libertine O}
+  \usepackage[protrusion]{microtype}  % needs an experimental and impposible to find package for xetex
 \else
   \usepackage{tgpagella}  % this case we lack lower case numbers, ligatures and some typographic niceties
+  \usepackage[expansion,protrusion]{microtype}
 \fi
 
 

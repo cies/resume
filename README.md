@@ -1,6 +1,6 @@
 # My Latex resume
 
- * Is a [nicely typesetted 2 page pdf file](https://github.com/cies/resume/blob/master/cies-breijs-resume.pdf?raw=true) (click the link to download mine)
+ * Is a [nicely typeset 2-page PDF](https://github.com/cies/resume/blob/master/cies-breijs-resume.pdf?raw=true) (click the link to download mine)
  * Compiles with or without installing software (read more below)
  * Might well be a starting point for your very own Latex resume...
 
@@ -68,11 +68,12 @@ working directory.
 
 ## ToDo
 
-  * (none at the moment)
+  * See if LuaTex can give access to both `fontspec`, `microtype` and unicode (so it can replace Xelatex)
 
 
 ## TaDa
 
+  * When using `pdflatex` the `microtype` package kicks in
   * Made switching to the [Linux Libertine](http://www.linuxlibertine.org) font easier
   * Fixed all outstanding spacing issues (thanks to the `\sloppy` command)
   * Works out of the box with ScribTex
