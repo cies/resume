@@ -60,8 +60,7 @@ looks slightly better with XeLaTeX.
 In recent Ubuntu versions you simply clone this project, change
 directory to the root of the project and do:
 
-        sudo apt-get install texlive-xetex texlive-latex-recommended \
-                             texlive-latex-extra tex-gyre
+        sudo apt-get install texlive-xetex texlive-latex-recommended tex-gyre
         ./xelatex *-resume.pdf
 
 If all went well an updated version of the PDF is found in your current
