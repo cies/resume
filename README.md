@@ -1,18 +1,16 @@
 # My Latex resume
 
  * Is a [nicely typeset 2-page PDF](https://github.com/cies/resume/blob/master/cies-breijs-resume.pdf?raw=true) (click the link to download mine)
- * Compiles with or without installing software (read more below)
- * Might well be a starting point for your very own Latex resume...
+ * Compiles with or without installing software (read more below).
+ * Might well be a starting point for your very own Latex resume.
 
 Linkedin serves well, but not in all situations.  At some point my profile
 just cluttered up, while all I wanted 'them' to have is a good looking
 two page resume.  Naturally turned to Latex.
 
 Looking at some Latex resumes online I found non that I really liked, so
-I gave it my best shot.  I made it into a well documented project as I
-expect more geeks want their resume to be typeset like this.  I don't really
-feel like making it into library, unless someone can convince me of the
-benefits; in the meantime just "fork it on GitHub".
+I gave it my best shot.  The I documented my effort here on Github as I
+expect more geeks want their resume to be typeset like this.
 
 It uses TeX Gyre Pagella, a font similar to Pallatino that is often used for
 books.  When compiled with XeLaTeX it has 'lower case numerals', which I
@@ -21,33 +19,36 @@ think look very nice.
 Except the horizonal lines and bullets everything is made of text.
 Hyper-refs are used where applicable, all in dark blue so 'print safe'.
 
+A 'last updated at' date is printed on the top-right of the page.
+
 Obviously it only relies on open source stuff.
 
 
 
 ## Generating the PDF
 
-There are several ways to generate a PDF from the Latex sources.  I
-describe only 2 of them here...
+There are several ways to generate a PDF from the Latex sources.
 
 
-#### Using ScribTex (no need to install any software)
+#### Using ShareLatex (no need to install any software)
 
-[ScribTex](http://www.scribtex.com) is a web application for creating
-and collaborating on Latex documents.  They have a free account that
-requires no login and can be used to compile this resume.
+[ShareLatex](http://www.sharelatex.com) is a web application for creating
+and collaborating on LaTeX documents.  They have a free account that
+can be used to compile this resume.
 
-To get this resume compiled with ScribTex:
+To get this resume compiled into a PDF with ShareLatex:
 
-  1. Copy the source of the [combined resume file](https://github.com/cies/resume/blob/master/combined/cies-breijs-resume.tex)
-  2. Go to [ScribTex.com](http://www.scribtex.com) and click the "Try it now" button to immediately start a free but *not saved* project.
-  3. In your new project click the `main.tex` file and replace the content with what you copied in step 1.
-  4. Hit the "Compile" button to see the resulting PDF.
+  1. Go to [sharelatex.com](http://www.sharelatex.com) and create first an account and then a project.
+  2. In your new project replace the content of the `main.tex` file with the LaTeX source of resume's content (`cies-breijs-resume.tex` in this case) from Github.
+  3. In your new project create a new file `resume.sty` and copy-paste
+     the content of the same named file from the Github repo.
+  4. Finally hit the "Compile" button to view and/or download the resulting PDF.
 
-The build script `build.sh` automatically combines the
-`resume-commands.tex` with any `*-resume.tex` files and puts them in the
-`combined/` folder.  So if you decide to fork this project, then running
-`./build.sh` is necessary to in case you want to follow these steps.
+The result will be nice, but IMO will be nicer if you change the
+rendering engine to XeLaTeX -- you can do so from the projects 'Setting' form
+which hides behind the gear-icon on the left.
+
+*TIP:* In the 'User Settings' (under 'Account' menu in the top-right) form you can set the spell-check language.
 
 
 #### Using XeLaTeX
@@ -59,20 +60,31 @@ looks slightly better with XeLaTeX.
 In recent Ubuntu versions you simply clone this project, change
 directory to the root of the project and do:
 
-        sudo apt-get install texlive-xetex tex-gyre texlive-latex-recommended
-        ./build.sh
+        sudo apt-get install texlive-xetex texlive-latex-recommended \
+                             texlive-latex-extra tex-gyre
+        ./xelatex *-resume.pdf
 
 If all went well an updated version of the PDF is found in your current
-working directory.
+working directory, alongside a bunch of `.log` and `.aux` files that
+you can safely ignore.
 
 
-## ToDo
+### Using pdfLatex
+
+Follow the same steps as for XeLaTeX, just replace the `./xelatex`
+command with `./pdflatex`.
+
+
+
+## TODO
 
   * See if LuaTex can give access to both `fontspec`, `microtype` and unicode (so it can replace Xelatex)
+  * Make the vertical spacing configurable in one setting.
 
 
-## TaDa
+## TADA
 
+  * [ShareLatex](http://sharelatex.com) is awesome! Point it out to users.
   * When using `pdflatex` the `microtype` package kicks in
   * Made switching to the [Linux Libertine](http://www.linuxlibertine.org) font easier
   * Fixed all outstanding spacing issues (thanks to the `\sloppy` command)
@@ -86,9 +98,8 @@ working directory.
 
 ## Terms of sharing
 
-Feel free to use, copy, fork, share, study and/or modify it because the LaTeX source code of the `resume-commands.tex` file is [MIT](http://en.wikipedia.org/wiki/MIT_License) licensed.
+Feel free to use, copy, fork, share, study and/or modify it because the LaTeX source code of the `resume.sty` file is [MIT](http://en.wikipedia.org/wiki/MIT_License) licensed.
 
 The text of my resume in the `cies-breijs-resume.tex` file is [CC-NC-ND](http://creativecommons.org/licenses/by-nc-nd/3.0/) licensed.
-
 
 

@@ -1,25 +1,37 @@
+%
 % LaTeX source of my resume
 % =========================
-
-% Commented for easy reuse... ;)
-
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
 % See the `README.md` file for more info.
-
+%
 % This file is licensed under the CC-NC-ND Creative Commons license.
+%
 
 
-% start a document with the here given default font size and paper size
+% Start a document with the here given default font size and paper size.
 \documentclass[10pt,a4paper]{article}
 
-% include the `tex` instructions that takes care of loading packages and defining commands
-\include{resume-commands}
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
 
 
 
 \begin{document}  % begin the content of the document
 \sloppy  % this to relax whitespacing in favour of straight margins
 
-\maintitle{Cies Breijs}{June 12, 1982}  % title on top of the document
+
+% title on top of the document
+\maintitle{Cies Breijs}{June 12, 1982}{Last update on \cleandate\today}
 
 \nobreakvspace{0.3em}  % add some page break averse vertical spacing
 
@@ -30,11 +42,11 @@
 % \\ breaks the line into a new paragraph
 \noindent\href{mailto:cies.at.kde.dot.nl}{cies\mbox{}@\mbox{}kde.nl}\sbull
 \textsmaller{+}31.646469087\sbull
-cies010 \emph{(Skype)}\sbull
+{\newnums cies010} \emph{(Skype)}\sbull
 \href{http://www.linkedin.com/in/ciesbreijs}{www.linkedin.com/in/ciesbreijs}
 \\
 Mathenesserplein 84\sbull
-3022\thinspace {\sc ld}\sbull
+3022\thinspace {\large \sc ld}\sbull
 Rotterdam\sbull
 The Netherlands
 
@@ -44,18 +56,14 @@ The Netherlands
 
 \vspace{-1.3em}  % some vertical spacing
 \begin{multicols}{2}  % open a multicolumn environment
-\noindent \emph{Creative geek with roots in the open source movement, an entrepreneurial mindset and a passion for user/customer centered software development with maintainable outcomes.}
+\noindent \emph{Creative geek with roots in the open source movement, an entrepreneurial mindset and a passion for delivering value by developing maintainable software.}
 \\
 \\
-At the age of seven (1989) I wrote my first lines of code in a \acr{LOGO}-like language on an \acr{MSX} (pre-\acr{PC}).  Two years later I attended a conference on an emerging new technology, the Internet, at the Erasmus University from which I would graduate 16 years later.
+At the age of seven (1989) Cies wrote his first lines of code in a \acr{LOGO}-like language on an \acr{MSX} (pre-\acr{PC}).  Two years later he attended a conference on an emerging new technology, the Internet, at the Erasmus University from which he would graduate 16 years later.
 
-After being introduced to the open source movement in 1997, I taught myself a variety of skills with help from the open source community.  Since 2002 I am a contributor to the \acr{KDE} project, as my pet project \KTurtle got admitted into their \emph{edu} module.
+After being introduced to the open source movement in 1997, he taught himself a variety of skills including system administration and programming (Bash, Python, Ruby \& \CPP).  By 2002 he got his pet project \acr{KT}urtle ---a zero-entry-barrier programming environment--- included into \acr{KDE}'s \emph{edu} module, and thereby almost every Linux distribution.
 
-\KTurtle is a zero-entry-barrier programming environment that is shipped with every Linux distribution.  It is well suited for teaching (children) the basics of programming, math and geometry.  Through this project I hope to give others the same opportunity I was given:\ to learn programming at early age.
-
-From 2003 to 2007 I studied at the Erasmus University Rotterdam and graduated in \emph{Business and Computer Science} (one curriculum).  After graduation I traveled Europe and Asia during a two year sabbatical, on which I worked on several occasions (see experience below).  Most challenging was my work for Intellecap:\ I architected and implemented an open source administrative backend for the booming micro credit lending industry.
-
-Upon return from my travels (\apo09) I joined Zarafa, one of the largest open source software vendors in the Netherlands.  In 2011 was asked to join Intellecap as the \acr{CTO} of their software division (\acr{ISTPL}) that within half a year had to let me go due to restructuring.  Currently I am looking for a challenging position to further train my geek muscle.
+From 2003 to 2007 he studied at the Erasmus University Rotterdam and graduated in \emph{Business and Computer Science} (one curriculum).  After graduation he travelled Europe and Asia during a two year sabbatical, on which he ``hustled'' several IT gigs (see experiences below) to extend the journey.
 \end{multicols}
 
 
@@ -64,23 +72,41 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
 \roottitle{Experience}
 
 \headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.hoppinger.com}{Hoppinger}}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Head of Technology}
+    {Apr \apo12 -- present}
+    {\bodytext{Hoppinger is an open source minded ``full-service'' internet agency.  Reporting directly to the general director, Marijn Bom. In charge of drawing and carrying out the vision for the tech department consisting of 15 developers.  Streamlined datacenter operations with Puppet, introduced Rails for custom web-app development and Capistrano for deployment automation.  Intimately involved with the software architecture of all technically challenging projects.}}
+}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\href{http://www.hro.nl}{HRO} (Rotterdam University of Applied Science)}
+  {\textsc{Rotterdam, The Netherlands}} {%
+  \headedsubsection
+    {Guest Lecturer}
+    {Sep \apo12 -- present}
+    {\bodytext{Introductory lecture on history of software development and open source for 1\textsuperscript{st} year CS students.}}
+}
+
+\headedsection
   {\href{http://www.intellecap.com}{Intellecap}/\href{http://istpl.in}{\acr{ISTPL}}}
   {\textsc{Mumbai, Pune \& Hyderabad, India}} {%
 
-  \headedsubsection  % sets the header for a subsection and contains usually body text
+  \headedsubsection
     {\acr{IT} Consultant}
     {Nov \apo08 -- Feb \apo09}
-    {\bodytext{Intellecap is a social-sector advisory firm serving corporates, non-profits, development agencies and governments working in developing markets. I assessed their software development team and methodologies, trained their developers and build several web applications. One of those apps is \href{http://www.mostfit.org}{Mostfit}, an open source \acr{MIS} for \href{http://en.wikipedia.org/wiki/Microcredit}{microcredit} lenders.}}
+    {\bodytext{Intellecap is a social-sector advisory firm serving corporates, non-profits, development agencies and governments working in developing markets. Assessed their software development team and methodologies, trained their developers and build several web applications.  One of those apps is \href{http://www.mostfit.org}{Mostfit}, an open source \acr{MIS} for \href{http://en.wikipedia.org/wiki/Microcredit}{microcredit} lenders.}}
 
   \headedsubsection
     {\acr{IT} \& Strategy Consultant}
     {Jan \apo10 -- Aug \apo11}
-    {\bodytext{\href{http://www.mostfit.org}{Mostfit} became a success and I was called in to solve several technical challenges, look at potential growth strategies, and assist in making a business case for this product in a company of its own.}}
+    {\bodytext{Called in to solve several technical challenges and look at potential growth strategies for \href{http://www.mostfit.org}{Mostfit}.}}
 
   \headedsubsection
-    {Chief Technology Officer}
-    {Oct \apo11 -- present}
-    {\bodytext{Joined the \acr{C}-family to make \href{http://www.mostfit.org}{Mostfit} the nr.1 software solution for micro credit lenders around the globe.}}
+    {CTO}
+    {Oct \apo11 -- Feb \apo12}
+    {\bodytext{Proudly joined the \acr{C}-family of Intellicap's software division, ISTPL, to make \href{http://www.mostfit.org}{Mostfit} the nr.1 software solution for micro credit lenders around the globe.  Contracts got terminated half a year later due to investment issues.}}
 }
 
 \headedsection
@@ -89,7 +115,7 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
   \headedsubsection
     {\acr{QA} \& Release Manager}
     {Dec \apo09 -- Jan \apo11}
-    {\bodytext{Zarafa might be the fastest growing open source product company in Europe. For an open source enthusiast like myself, working with Zarafa is a wonderful opportunity. Reporting directly to the \acr{CEO}, Brian Josef, and working closely with the \acr{CTO}, Steve Hardy, I drove the change to test automation and continuous integration. Furthermore I architected new documentation and translation systems. My Indian work experiences proved particularly valuable, as I was sent to analyze and streamline their outsourced operations in India.}}
+    {\bodytext{Zarafa might be the fastest growing open source product company in Europe, making a drop-in replacement for MS Exchange.  Reported directly to the \acr{CEO}, Brian Josef, and worked closely with the \acr{CTO}, Steve Hardy.  In charge of the 6 men strong QA department.  Established test automation and continuous integration.  Architected and implemented an all-integrated documentation and translation system that employed community effort.  Got sent to India to analyse and streamline their outsourced operations.}}
 }
 
 \headedsection
@@ -98,7 +124,7 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
   \headedsubsection
     {\acr{IT} Consultant}
     {Nov \apo09 -- Dec \apo09}
-    {\bodytext{Dharma Publishing, the worlds largest Buddhist publisher, is a non-profit, all-volunteer organization that helps to preserve Tibetan Buddhism and culture. I build them a \href{http://www.dharmapublishing.com}{web store}, and moved the infrastructure of all their web media to a nearly zero maintenance setup that they can maintain themselves.}}
+    {\bodytext{Dharma Publishing, the worlds largest Buddhist publisher, is a non-profit, all-volunteer organisation that helps to preserve Tibetan Buddhism and culture. Built their \href{http://www.dharmapublishing.com}{web shop}, and moved their digital content sales to SaaS applications.}}
 }
 
 \headedsection
@@ -107,7 +133,7 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
   \headedsubsection
     {Software Engineer}
     {Dec \apo03 -- present}
-    {\bodytext{\KTurtle is an educational programming environment that simplifies learning the basics of programming. At early age I learned programming using \acr{MSX-LOGO}, by creating \KTurtle I want to ensure future generation's access to a similar piece of software. I was honored when \KTurtle got admitted to \acr{KDE} in 2003.}}
+    {\bodytext{\acr{KT}urtle is an educational programming environment that simplifies learning the basics of programming.  \acr{KT}urtle is intended as a gift to future generations:\ a simple environment to get started with programming.  In 2003 \acr{KT}urtle got admitted to the \acr{KDE} project.}}
 }
 
 \headedsection
@@ -116,7 +142,7 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
   \headedsubsection
     {Initiator}
     {Nov \apo07 -- Apr \apo10}
-    {\bodytext{The Truetopia Project is an open source web application (Rails) to facilitate self-governing communities. It provides a workflow for collaborative problem identification and solution design.}}
+    {\bodytext{The Truetopia Project is an open source web application (Rails) to facilitate self-governing communities.  It provides a workflow for collaborative problem identification and solution design.}}
 }
 
 \headedsection
@@ -125,7 +151,7 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
   \headedsubsection
     {Guest Lecturer}
     {Sep \apo09}
-    {\bodytext{Dr.\@ Pilun Piyasirivej and Mr.\@ Michel Bauwens invited me to give two guest lectures:\ one on the open source movement and one on the semantic web.}}
+    {\bodytext{Invited by Dr.\@ Pilun Piyasirivej and Mr.\@ Michel Bauwens for two guest lectures:\ the open source movement and the semantic web.}}
 }
 
 \headedsection
@@ -134,7 +160,7 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
   \headedsubsection
     {\acr{IT} Consultant}
     {Aug \apo09 -- Sep \apo09}
-    {\bodytext{Architected and largely implemented an open source media sharing web service (\acr{REST} api) that facilitates video uploads, transcoding and streaming. Coached their development team on system design, Ruby development (using Merb/Rails) and testing strategies such as \acr{TDD}/\acr{BDD}.}}
+    {\bodytext{Architected and largely implemented an open source media sharing web service (\acr{REST} api) that facilitates video uploads, transcoding and streaming.  Coached their development team on system design, Ruby development (using Merb/Rails) and testing strategies such as \acr{TDD}/\acr{BDD}.}}
 }
 
 \headedsection
@@ -143,7 +169,7 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
   \headedsubsection
     {Senior Visionary}
     {Jul \apo06 -- Sep \apo09}
-    {\bodytext{I helped Peter Duijnstee (the proprietor of Commuun) with setting up the technical infrastructure, defining the core competences and creating a brand for his internet company. We collaborated on several web applications (all Rails apps) within the context of his company.}}
+    {\bodytext{Set up the technical infrastructure, defined the core competences and created a brand together with Peter Duijnstee (the proprietor of Commuun).  Then collaborated on several web applications (all Rails apps) within the context of his company.}}
 }
 
 \headedsection
@@ -152,18 +178,17 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
   \headedsubsection
     {Guest Lecturer}
     {Jul \apo06 -- Jul \apo09}
-    {\bodytext{Yearly guest lectures on the phenomenon of open source, as part of the first year curriculum of \emph{Computer Science \& Economics}.}}
+    {\bodytext{Conducted a guest lecture on the phenomenon of open source, as part of the first year curriculum of \emph{Computer Science \& Economics}.}}
 }
 
-\headedsection
-  {LIP Automatisering}
-  {\textsc{Breda, The Netherlands}} {%
-  \headedsubsection
-    {Software Auditor}
-    {Sep \apo06}
-    {\bodytext
-      {Audited their flag ship product \emph{\acr{LIP} Suite}:\ an \acr{ERP} solution for construction companies.}}
-}
+%\headedsection
+%  {LIP Automatisering}
+%  {\textsc{Breda, The Netherlands}} {%
+%  \headedsubsection
+%    {Software Auditor}
+%    {Sep \apo06}
+%    {\bodytext{Audited their flag ship product \emph{\acr{LIP} Suite}:\ an %\acr{ERP} solution for construction companies.}}
+%}
 
 \headedsection
   {\href{http://www.thehealthagency.com}{The Health Agency}}
@@ -172,7 +197,7 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
   \headedsubsection
     {Software Engineer}
     {Jun \apo05 -- Feb \apo06}
-    {\bodytext{I worked on their innovative content management system (\acr{CMS}) targeted towards the health care sector. It is developed from scratch in Python and uses Postgre\acr{SQL}, \acr{XML}/\acr{XSLT} and Twisted.}}
+    {\bodytext{Worked on their CMS (written in Python and uses Postgre\acr{SQL}, \acr{XML}/\acr{XSLT} and Twisted).}}
 
   \headedsubsection
     {Software Auditor}
@@ -180,8 +205,9 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
     {\bodytext{Assessed their Python/Zope/\acr{Z}o\acr{DB}-based web framework re-engineering project.}}
 }
 
+\vspace{-0.2em}
 \begin{center}
-  \emph{Please refer to \href{http://www.linkedin.com/in/ciesbreijs}{my Linkedin profile} for the complete list of work experiences along with recommendations.}
+  \emph{\small Please refer to my \href{http://www.linkedin.com/in/ciesbreijs}{Linked-in profile} for a more complete list of work experiences along with recommendations.}
 \end{center}
 
 
@@ -190,27 +216,27 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
 \roottitle{Education}
 
 \headedsection
-  {Erasmus University Rotterdam}
+  {\href{http://www.eur.nl/english}{Erasmus University Rotterdam}}
   {\textsc{Rotterdam, The Netherlands}} {%
   \headedsubsection
     {Bachelor degree in Computer Science \& Economics}
     {2004 -- 2007}
-    {\bodytext{Focussed on the economics of open source, rapid application development (\acr{RAD}) and the semantic web technology stack (\acr{RDF}/\acr{RDFS}, \acr{OWL} and \acr{SPARQL}).}}
+    {\bodytext{Focused on the economics of open source, rapid application development (\acr{RAD}) and the semantic web technology stack (\acr{RDF}/\acr{RDFS}, \acr{OWL} and \acr{SPARQL}).  Picked up quite some Java skills along the way.}}
 }
 
 \headedsection
-  {Technical University Delft}
+  {\href{http://www.tudelft.nl/en}{Technical University Delft}}
   {\textsc{Delft, The Netherlands}} {%
   \headedsubsection
-    {Industrial Design Engineering \textnormal{(discontinued)}}
+    {Industrial Design Engineering \textnormal{\textit{~(discontinued)}}}
     {2001 -- 2002} {}
 }
 
 \headedsection
-  {Libanon Lyceum}
+  {\href{http://www.libanonlyceum.nl}{Libanon Lyceum}}
   {\textsc{Rotterdam, The Netherlands}} {%
   \headedsubsection
-    {\acr{VWO} \textnormal{(pre-university secondary education)}}
+    {\acr{VWO} \textnormal{~(pre-university secondary education)}}
     {1994 -- 2000} {}
 }
 
@@ -220,9 +246,10 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
 \roottitle{Skills}
 
 \inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
-  {Technical specialties:}
-  {Software design and implementation, with(in) a team. I love Ruby/\nsp Python/\nsp Java/\nsp \CPP and flirt regularly with Haskell. Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mainly jQuery). Linux administration skills:\ bash, Apache, My\acr{SQL}, Postgres\acr{SQL}, virtualization/cloud (Open\acr{VZ}, \acr{VM}ware, \acr{KVM}, Xen and \acr{EC}2), datacenter automation (Puppet and Chef), continuous integration (Hudson/Jenkins).}
+  {Technical expertise:}
+  {Software design and implementation, with(in) a team.  Big fan of Agile methodologies (Scrum and Kanban), automated deployment (Capistrano) and continuous integration (Hudson/Jenkins).  Enjoys writing Ruby/\nsp Python/\nsp Java/\nsp \CPP, yet flirts regularly with Haskell.  Solid knowledge of web technologies:\ \acr{HTML+CSS}, \acr{XML}, \acr{RDF}, \acr{REST}, \acr{SOAP} and JavaScript (mostly Angular and jQuery).  Linux administration skills:\ Bash, Apache, My\acr{SQL}, Postgres\acr{SQL}, virtualization/cloud (Vagrant, Open\acr{VZ}, \acr{VM}ware, \acr{KVM}, Xen and \acr{EC}2), datacenter automation (Puppet and Chef).}
 
+\vspace{0.5em}
 \inlineheadsection
   {Natural languages:}
   {Dutch \emph{(mother tongue)}, English \emph{(full professional proficiency)}, German \emph{(limited working proficiency)}, French \emph{(elementary proficiency)} and Mandarin Chinese \emph{(beginner)}.}
@@ -234,7 +261,9 @@ Upon return from my travels (\apo09) I joined Zarafa, one of the largest open so
 
 \inlineheadsection
   {Non-exhaustive and in alphabetical order:}
-  {Art, Buddhism, cryptography, music, open source, philosophy, software engineering, travel, typography (e.g.\ graphic design, \LaTeX), \acr{UI}/\acr{UX} and vegetarian cooking.}
+  {art, Buddhism, cryptography, Go (board game), history, music, open source, philosophy, software engineering (methodologies), travel, typography (e.g.\ graphic design, \LaTeX), \acr{UI}/\acr{UX}-design and vegetarian/vegan cooking.}
 
 
 \end{document}
+
+＀
